@@ -1,0 +1,84 @@
+classType lib.average.Average
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_7
+		}
+	}
+	methodArgumentIdentifier calc.inputVal1 at (21, 25) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.inputVal2 at (21, 65) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.inputVal3 at (21, 105) {
+		label at (0, -1)
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.inputVal4 at (21, 145) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (231, 66) {
+		inPin connection_1 {
+			bendpoints (80, 0), (80, 40)
+		}
+		inPin connection_2 {
+			bendpoints (80, 0), (80, 10)
+		}
+		inPin connection_3 {
+			bendpoints (80, 0), (80, -10)
+		}
+		inPin connection_4 {
+			bendpoints (80, 0), (80, -40)
+		}
+		outPin {
+			connection_5
+		}
+	}
+	division at (331, 86) {
+		inPin connection_5
+		inPin connection_6
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier numberOfItems at (281, 105) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (421, 95) {
+		label at (0, 0)
+		inPin connection_8
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+}

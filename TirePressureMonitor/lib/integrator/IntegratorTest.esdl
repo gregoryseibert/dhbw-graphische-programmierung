@@ -1,4 +1,4 @@
-package lib;
+package lib.integrator;
 
 static class IntegratorTest {
 	Integrator tester;

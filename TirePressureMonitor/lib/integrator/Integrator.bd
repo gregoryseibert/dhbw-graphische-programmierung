@@ -1,4 +1,4 @@
-classType lib.Integrator
+classType lib.integrator.Integrator
 blockdiagramSpecification Main {
 	methodBody integrate {
 		outPin {
