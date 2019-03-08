@@ -1,0 +1,53 @@
+<?SCHEMA schemaVersion="1.0"?>
+<SGConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.CommonSignalGenerator.xsd" xsi:type="ETAS.EE.Data.SignalGenerator.SGConfigurationType">
+  <signalDescriptionSets xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetType" id="ID600d8853-b28f-4214-a971-1b0ed2286a4b" name="SignalDescriptionSet" comment="" repetitions="1">
+      <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="IDc312b794-4762-4d9b-a262-fa25d29b725c" />
+      </signalDescriptions>
+    </item>
+  </signalDescriptionSets>
+  <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionType" id="IDc312b794-4762-4d9b-a262-fa25d29b725c" name="SignalDescription" comment="">
+      <signalSegments xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="60000000000" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <pulse xsi:type="ETAS.EE.Data.SignalGenerator.WFPulseType">
+              <offset xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="-1" />
+              </offset>
+              <amplitude xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="2" />
+              </amplitude>
+              <period xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="10" />
+              </period>
+              <dutyCycle xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0.5" />
+              </dutyCycle>
+              <phase xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0" />
+              </phase>
+            </pulse>
+          </waveForm>
+        </item>
+      </signalSegments>
+    </item>
+  </signalDescriptions>
+  <signalMappings xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingType" id="IDdd15b3f2-b313-4555-a95d-66e2a17eb642" name="Mapping">
+      <mappingItems xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="IDebdddfd6-fc7a-4bc0-8811-f3fcf84c3502" label="lib.IntegratorTest.integrate_inputVal" task="Task0">
+          <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="IDc312b794-4762-4d9b-a262-fa25d29b725c" />
+        </item>
+      </mappingItems>
+    </item>
+  </signalMappings>
+  <signalGenerators xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorType" id="ID3215703b-974b-4137-a02d-d044339220e8" instanceId="0" name="SignalGenerator" startTime="0" stopBehaviour="StartValue">
+      <mapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorMappingContainerType" mappingChange="Dynamically">
+        <signalMapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingRefType" idRef="IDdd15b3f2-b313-4555-a95d-66e2a17eb642" />
+      </mapping>
+    </item>
+  </signalGenerators>
+</SGConfiguration>

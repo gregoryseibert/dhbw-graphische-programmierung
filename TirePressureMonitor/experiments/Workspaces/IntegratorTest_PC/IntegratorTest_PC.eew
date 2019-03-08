@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID1febe3dd-41b5-418b-bd43-890baed76b14" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID9dce4fc9-08f3-49cf-bb7a-0381d8fc2d47" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID299f12f4-e627-4eeb-9dd4-d5dd12793457" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID89ae5e37-2043-4b3c-ac45-f4bfe902b1e7" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID11d6664a-0129-4c3d-9ea1-39c02fc9fa4a" path="C:\Users\Gregory\Documents\dhbw-graphische-programmierung\TirePressureMonitor\experiments\Experiments\system\IntegratorTest_PC\IntegratorTest_PC.eex" hintPath="..\..\Experiments\system\IntegratorTest_PC\IntegratorTest_PC.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID7f564451-eb85-4dcb-ad24-58c94a149a58" Created="2019-03-08T16:05:43.965Z" LastOpened="2019-03-08T16:05:43.965Z" LastSaved="2019-03-08T16:13:14.265Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="IDa7d77301-dc96-475e-a3c0-656c13ea32b7" Created="3.7.6.132" LastSaved="3.7.6.132" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>
