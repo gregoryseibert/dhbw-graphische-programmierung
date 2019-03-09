@@ -1,0 +1,84 @@
+classType components.Module
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_8
+		}
+	}
+	complexIdentifier tirePressureMonitorComponent at (191, 31) size (14, 15) {
+		label at (0, 1)
+		methodCall components.TirePressureMonitor.checkTirePressure {
+			argumentPin dTVal at (left, 0) connection_5
+			argumentPin vFrontLeft at (left, 7) connection_1 {
+				bendpoints (120, 0)
+			}
+			argumentPin vFrontRight at (left, 9) connection_2 {
+				bendpoints (110, 0), (110, 10)
+			}
+			argumentPin vRearLeft at (left, 11) connection_3 {
+				bendpoints (110, 0), (110, -10)
+			}
+			argumentPin vRearRight at (left, 13) connection_4 {
+				bendpoints (120, 0)
+			}
+			returnPin at (right, 0) {
+				connection_9
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier vFrontLeft at (21, 75) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier vFrontRight at (21, 115) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier vRearLeft at (21, 155) {
+		label at (0, -1)
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier vRearRight at (21, 195) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier components.DeltaTimeService.deltaT at (11, 35) {
+		label at (10, -1)
+		inPin outPin {
+			connection_5
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier detectedTirePressureDeviation at (381, 35) {
+		label at (0, -1)
+		inPin connection_9
+		outPin sequenceCall {
+			inPin connection_8
+		}
+	}
+}
