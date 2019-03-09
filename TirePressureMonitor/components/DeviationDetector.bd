@@ -1,0 +1,218 @@
+classType components.DeviationDetector
+blockdiagramSpecification Main {
+	methodBody checkForDeviation {
+		outPin active {
+			connection_37
+		}
+	}
+	methodArgumentIdentifier checkForDeviation.inputVal1 at (11, 15) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkForDeviation.inputVal2 at (11, 75) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkForDeviation.inputVal3 at (11, 135) {
+		label at (0, -1)
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkForDeviation.inputVal4 at (11, 195) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkForDeviation.referenceVal at (11, 265) {
+		label at (0, -1)
+		outPin {
+			connection_40, connection_41, connection_42, connection_43, connection_44, connection_45, connection_46, connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkForDeviation.deviationThreshold at (11, 305) {
+		label at (0, -1)
+		outPin {
+			connection_26, connection_27, connection_28, connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	subtraction at (191, 16) {
+		inPin connection_1
+		inPin connection_42 {
+			bendpoints (140, 0)
+		}
+		outPin {
+			connection_13
+		}
+	}
+	subtraction at (191, 76) {
+		inPin connection_2
+		inPin connection_41 {
+			bendpoints (140, 0)
+		}
+		outPin {
+			connection_14
+		}
+	}
+	subtraction at (191, 136) {
+		inPin connection_3
+		inPin connection_40 {
+			bendpoints (140, 0)
+		}
+		outPin {
+			connection_15
+		}
+	}
+	subtraction at (191, 196) {
+		inPin connection_4
+		inPin connection_39 {
+			bendpoints (140, 0)
+		}
+		outPin {
+			connection_16
+		}
+	}
+	division at (291, 26) {
+		inPin connection_13
+		inPin connection_46 {
+			bendpoints (240, 0)
+		}
+		outPin {
+			connection_24
+		}
+	}
+	division at (291, 86) {
+		inPin connection_14
+		inPin connection_45 {
+			bendpoints (240, 0)
+		}
+		outPin {
+			connection_23
+		}
+	}
+	division at (291, 146) {
+		inPin connection_15
+		inPin connection_44 {
+			bendpoints (240, 0)
+		}
+		outPin {
+			connection_22
+		}
+	}
+	division at (291, 206) {
+		inPin connection_16
+		inPin connection_43 {
+			bendpoints (240, 0)
+		}
+		outPin {
+			connection_21
+		}
+	}
+	absolute at (351, 31) {
+		inPin connection_24
+		outPin {
+			connection_29
+		}
+	}
+	absolute at (351, 91) {
+		inPin connection_23
+		outPin {
+			connection_30
+		}
+	}
+	absolute at (351, 151) {
+		inPin connection_22
+		outPin {
+			connection_31
+		}
+	}
+	absolute at (351, 211) {
+		inPin connection_21
+		outPin {
+			connection_32
+		}
+	}
+	greaterOrEqual at (411, 36) {
+		inPin connection_29
+		inPin connection_28 {
+			bendpoints (360, 0)
+		}
+		outPin {
+			connection_33
+		}
+	}
+	greaterOrEqual at (411, 96) {
+		inPin connection_30
+		inPin connection_27 {
+			bendpoints (360, 0)
+		}
+		outPin {
+			connection_34
+		}
+	}
+	greaterOrEqual at (411, 156) {
+		inPin connection_31
+		inPin connection_26 {
+			bendpoints (360, 0)
+		}
+		outPin {
+			connection_35
+		}
+	}
+	greaterOrEqual at (411, 216) {
+		inPin connection_32
+		inPin connection_25 {
+			bendpoints (360, 0)
+		}
+		outPin {
+			connection_36
+		}
+	}
+	or at (491, 116) {
+		inPin connection_33 {
+			bendpoints (40, 0)
+		}
+		inPin connection_34 {
+			bendpoints (20, 0), (20, 20)
+		}
+		inPin connection_35 {
+			bendpoints (20, 0), (20, -20)
+		}
+		inPin connection_36 {
+			bendpoints (40, 0)
+		}
+		outPin {
+			connection_38
+		}
+	}
+	return at (541, 135) {
+		label at (0, 0)
+		inPin connection_38
+		sequenceCall {
+			inPin connection_37
+		}
+	}
+}
