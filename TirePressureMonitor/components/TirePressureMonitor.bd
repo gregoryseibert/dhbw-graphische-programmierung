@@ -2,13 +2,13 @@ classType components.TirePressureMonitor
 blockdiagramSpecification Main {
 	methodBody checkTirePressure {
 		outPin active {
-			connection_15, connection_17, connection_19, connection_21, connection_29
+			connection_80, connection_82, connection_84, connection_86, connection_29
 		}
 	}
 	methodArgumentIdentifier checkTirePressure.vFrontLeft at (21, 95) {
 		label at (0, -1)
 		outPin {
-			connection_7
+			connection_65
 		}
 		sequenceCall {
 			inPin
@@ -17,7 +17,7 @@ blockdiagramSpecification Main {
 	methodArgumentIdentifier checkTirePressure.vFrontRight at (21, 165) {
 		label at (0, -1)
 		outPin {
-			connection_8
+			connection_66
 		}
 		sequenceCall {
 			inPin
@@ -26,7 +26,7 @@ blockdiagramSpecification Main {
 	methodArgumentIdentifier checkTirePressure.vRearLeft at (21, 235) {
 		label at (0, -1)
 		outPin {
-			connection_9
+			connection_67
 		}
 		sequenceCall {
 			inPin
@@ -35,28 +35,28 @@ blockdiagramSpecification Main {
 	methodArgumentIdentifier checkTirePressure.vRearRight at (21, 305) {
 		label at (0, -1)
 		outPin {
-			connection_10
+			connection_68
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	complexIdentifier averageComponent at (431, 171) size (15, 5) {
-		label at (-10, 1)
+	complexIdentifier averageComponent at (561, 171) size (15, 5) {
+		label at (0, 1)
 		methodCall components.Average.calculateAverage {
-			argumentPin inputVal1 at (left, 0) connection_11 {
-				bendpoints (100, 0), (100, 90)
+			argumentPin inputVal1 at (left, 0) connection_88 {
+				bendpoints (100, 0)
 			}
-			argumentPin inputVal2 at (left, 1) connection_12 {
-				bendpoints (90, 0), (90, 30)
+			argumentPin inputVal2 at (left, 1) connection_91 {
+				bendpoints (80, 0), (80, 30)
 			}
-			argumentPin inputVal3 at (left, 2) connection_13 {
-				bendpoints (90, 0), (90, -30)
+			argumentPin inputVal3 at (left, 2) connection_90 {
+				bendpoints (80, 0), (80, -30)
 			}
-			argumentPin inputVal4 at (left, 3) connection_14 {
-				bendpoints (100, 0), (100, -90)
+			argumentPin inputVal4 at (left, 3) connection_89 {
+				bendpoints (100, 0)
 			}
-			returnPin at (right, 0) {
+			returnPin at (right, 3) {
 				connection_23
 			}
 			sequenceCall {
@@ -64,105 +64,33 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	complexIdentifier integratorComponent at (211, 81) size (9, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_16 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_7
-			sequenceCall at (90, -24) {
-				inPin connection_15
-			}
-		}
-		methodCall components.Integrator.outVal {
-			returnPin at (right, 0) {
-				connection_11
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
-	complexIdentifier integratorComponent at (211, 151) size (9, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_18 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_8
-			sequenceCall at (90, -24) {
-				inPin connection_17
-			}
-		}
-		methodCall components.Integrator.outVal {
-			returnPin at (right, 0) {
-				connection_12
-			}
-			sequenceCall at (0, 0) {
-				inPin
-			}
-		}
-	}
-	complexIdentifier integratorComponent at (211, 221) size (9, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_20 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_9
-			sequenceCall at (90, -24) {
-				inPin connection_19
-			}
-		}
-		methodCall components.Integrator.outVal {
-			returnPin at (right, 0) {
-				connection_13
-			}
-			sequenceCall at (0, 0) {
-				inPin
-			}
-		}
-	}
-	complexIdentifier integratorComponent at (211, 291) size (9, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_22 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_10
-			sequenceCall at (90, -24) {
-				inPin connection_21
-			}
-		}
-		methodCall components.Integrator.outVal {
-			returnPin at (right, 0) {
-				connection_14
-			}
-			sequenceCall at (0, 0) {
-				inPin
-			}
-		}
-	}
 	methodArgumentIdentifier checkTirePressure.dTVal at (21, 25) {
 		label at (0, -1)
 		outPin {
-			connection_18, connection_20, connection_22, connection_16
+			connection_69, connection_70, connection_71, connection_64
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	complexIdentifier deviationDetectorComponent at (771, 51) size (16, 19) {
+	complexIdentifier deviationDetectorComponent at (861, 121) size (16, 15) {
 		label at (-40, 1)
 		methodCall components.DeviationDetector.checkForDeviation {
-			argumentPin inputVal1 at (left, 0) connection_28
-			argumentPin inputVal2 at (left, 3) connection_27
-			argumentPin inputVal3 at (left, 6) connection_26
-			argumentPin inputVal4 at (left, 9) connection_25
-			argumentPin referenceVal at (left, 12) connection_23
-			argumentPin deviationThreshold at (left, 17) connection_24
-			returnPin at (right, 9) {
+			argumentPin inputVal1 at (left, 0) connection_92 {
+				bendpoints (100, 0), (100, 40)
+			}
+			argumentPin inputVal2 at (left, 2) connection_93 {
+				bendpoints (80, 0), (80, -10)
+			}
+			argumentPin inputVal3 at (left, 11) connection_95 {
+				bendpoints (80, 0), (80, 10)
+			}
+			argumentPin inputVal4 at (left, 13) connection_96 {
+				bendpoints (100, 0), (100, -40)
+			}
+			argumentPin referenceVal at (left, 8) connection_23
+			argumentPin deviationThreshold at (left, 5) connection_24
+			returnPin at (right, 7) {
 				connection_30
 			}
 			sequenceCall {
@@ -170,7 +98,7 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier deviationThreshold at (581, 225) {
+	simpleIdentifier deviationThreshold at (721, 175) {
 		label at (0, -1)
 		outPin {
 			connection_24
@@ -179,47 +107,111 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier checkTirePressure.vFrontLeft at (581, 55) {
-		label at (0, -1)
-		outPin {
-			connection_28
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	methodArgumentIdentifier checkTirePressure.vFrontRight at (581, 85) {
-		label at (0, -1)
-		outPin {
-			connection_27
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	methodArgumentIdentifier checkTirePressure.vRearLeft at (581, 115) {
-		label at (0, -1)
-		outPin {
-			connection_26
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	methodArgumentIdentifier checkTirePressure.vRearRight at (581, 145) {
-		label at (0, -1)
-		outPin {
-			connection_25
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	return at (961, 145) {
+	return at (1051, 195) {
 		label at (0, 0)
 		inPin connection_30
 		sequenceCall {
 			inPin connection_29
+		}
+	}
+	complexIdentifier integratorComponent1 at (211, 81) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_64 {
+				bendpoints (140, 0)
+			}
+			argumentPin inputVal at (left, 1) connection_65
+			returnPin at (right, 0) {
+				connection_81
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier integratorComponent2 at (211, 151) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_69 {
+				bendpoints (140, 0)
+			}
+			argumentPin inputVal at (left, 1) connection_66
+			returnPin at (right, 0) {
+				connection_83
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier integratorComponent3 at (211, 221) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_70 {
+				bendpoints (140, 0)
+			}
+			argumentPin inputVal at (left, 1) connection_67
+			returnPin at (right, 0) {
+				connection_85
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier integratorComponent4 at (211, 291) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_71 {
+				bendpoints (140, 0)
+			}
+			argumentPin inputVal at (left, 1) connection_68
+			returnPin at (right, 0) {
+				connection_87
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier distanceFrontLeft at (401, 85) {
+		label at (0, -1)
+		inPin connection_81
+		outPin {
+			connection_92, connection_88
+		}
+		sequenceCall {
+			inPin connection_80
+		}
+	}
+	simpleIdentifier distanceFrontRight at (401, 155) {
+		label at (0, -1)
+		inPin connection_83
+		outPin {
+			connection_93, connection_91
+		}
+		sequenceCall {
+			inPin connection_82
+		}
+	}
+	simpleIdentifier distanceRearRight at (401, 295) {
+		label at (0, -1)
+		inPin connection_87
+		outPin {
+			connection_96, connection_89
+		}
+		sequenceCall {
+			inPin connection_86
+		}
+	}
+	simpleIdentifier distanceRearLeft at (401, 225) {
+		label at (0, -1)
+		inPin connection_85
+		outPin {
+			connection_95, connection_90
+		}
+		sequenceCall {
+			inPin connection_84
 		}
 	}
 }

@@ -5,13 +5,8 @@ class Integrator {
 	characteristic real kI = 4.0;
 
 	@generated("blockdiagram")
-	public void integrate(real in dTVal, real in inputVal) {
+	public real integrate(real in dTVal, real in inputVal) {
 		memory = ((inputVal * kI * dTVal) + memory); // Main/integrate 1
-	}
-
-	@no_side_effect
-	@generated("blockdiagram")
-	public real outVal() {
-		return memory; // Main/outVal 1
+		return memory; // Main/integrate 2
 	}
 }

@@ -1,13 +1,8 @@
 classType components.Integrator
 blockdiagramSpecification Main {
 	methodBody integrate {
-		outPin {
-			connection_7
-		}
-	}
-	methodBody outVal {
 		outPin active {
-			connection_10
+			connection_7, connection_10
 		}
 	}
 	simpleIdentifier memory at (291, 75) {
@@ -68,7 +63,7 @@ blockdiagramSpecification Main {
 			connection_8
 		}
 	}
-	return at (391, 75) {
+	return at (411, 75) {
 		label at (0, 0)
 		inPin connection_11
 		sequenceCall {
