@@ -114,66 +114,6 @@ blockdiagramSpecification Main {
 			inPin connection_29
 		}
 	}
-	complexIdentifier integratorComponent1 at (211, 81) size (14, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_64 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_65
-			returnPin at (right, 0) {
-				connection_81
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
-	complexIdentifier integratorComponent2 at (211, 151) size (14, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_69 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_66
-			returnPin at (right, 0) {
-				connection_83
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
-	complexIdentifier integratorComponent3 at (211, 221) size (14, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_70 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_67
-			returnPin at (right, 0) {
-				connection_85
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
-	complexIdentifier integratorComponent4 at (211, 291) size (14, 3) {
-		label at (0, 1)
-		methodCall components.Integrator.integrate {
-			argumentPin dTVal at (left, 0) connection_71 {
-				bendpoints (140, 0)
-			}
-			argumentPin inputVal at (left, 1) connection_68
-			returnPin at (right, 0) {
-				connection_87
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
 	simpleIdentifier distanceFrontLeft at (401, 85) {
 		label at (0, -1)
 		inPin connection_81
@@ -212,6 +152,66 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall {
 			inPin connection_84
+		}
+	}
+	complexIdentifier integratorComponent at (211, 81) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_64 {
+				bendpoints (70, 0), (70, 60)
+			}
+			argumentPin inputVal at (left, 1) connection_65
+			returnPin at (right, 0) {
+				connection_81
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier integratorComponent at (211, 151) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_69 {
+				bendpoints (70, 0), (70, 130)
+			}
+			argumentPin inputVal at (left, 1) connection_66
+			returnPin at (right, 0) {
+				connection_83
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier integratorComponent at (211, 221) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_70 {
+				bendpoints (70, 0), (70, 200)
+			}
+			argumentPin inputVal at (left, 1) connection_67
+			returnPin at (right, 0) {
+				connection_85
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier integratorComponent at (211, 291) size (14, 3) {
+		label at (0, 1)
+		methodCall components.Integrator.integrate {
+			argumentPin dTVal at (left, 0) connection_71 {
+				bendpoints (70, 0), (70, 270)
+			}
+			argumentPin inputVal at (left, 1) connection_68
+			returnPin at (right, 0) {
+				connection_87
+			}
+			sequenceCall {
+				inPin
+			}
 		}
 	}
 }
