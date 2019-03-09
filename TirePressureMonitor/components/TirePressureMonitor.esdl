@@ -1,21 +1,31 @@
 package components;
 
-class TirePressureMonitor {
+static class TirePressureMonitor {
 	characteristic real deviationThreshold = 0.05;
+	characteristic real vFrontLeft = 0.0;
+	characteristic real vFrontRight = 0.0;
+	characteristic real vRearLeft = 0.0;
+	characteristic real vRearRight = 0.0;
+	
 	Average averageComponent;
 	DeviationDetector deviationDetectorComponent;
 	Integrator integratorComponent;
+	
 	real distanceFrontLeft = 0.0;
 	real distanceFrontRight = 0.0;
 	real distanceRearRight = 0.0;
 	real distanceRearLeft = 0.0;
+	real averageDistance = 0.0;
+	boolean detectedTirePressureDeviation = false;
 
+	@thread
 	@generated("blockdiagram")
-	public boolean checkTirePressure(real in dTVal, real in vFrontLeft, real in vFrontRight, real in vRearLeft, real in vRearRight) {
-		distanceFrontLeft = integratorComponent.integrate(dTVal, vFrontLeft); // Main/checkTirePressure 1
-		distanceFrontRight = integratorComponent.integrate(dTVal, vFrontRight); // Main/checkTirePressure 2
-		distanceRearLeft = integratorComponent.integrate(dTVal, vRearLeft); // Main/checkTirePressure 3
-		distanceRearRight = integratorComponent.integrate(dTVal, vRearRight); // Main/checkTirePressure 4
-		return deviationDetectorComponent.checkForDeviation(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight, averageComponent.calculateAverage(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight), deviationThreshold); // Main/checkTirePressure 5
+	public void checkTirePressure() {
+		distanceFrontLeft = integratorComponent.integrate(DeltaTimeService.deltaT, vFrontLeft); // Main/checkTirePressure 1
+		distanceFrontRight = integratorComponent.integrate(DeltaTimeService.deltaT, vFrontRight); // Main/checkTirePressure 2
+		distanceRearLeft = integratorComponent.integrate(DeltaTimeService.deltaT, vRearLeft); // Main/checkTirePressure 3
+		distanceRearRight = integratorComponent.integrate(DeltaTimeService.deltaT, vRearRight); // Main/checkTirePressure 4
+		averageDistance = averageComponent.calculateAverage(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight); // Main/checkTirePressure 5
+		detectedTirePressureDeviation = deviationDetectorComponent.checkForDeviation(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight, averageDistance, deviationThreshold); // Main/checkTirePressure 6
 	}
 }
