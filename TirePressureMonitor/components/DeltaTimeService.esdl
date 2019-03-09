@@ -1,4 +1,4 @@
-package lib.deltaTimeService;
+package components;
 
 type TimeType is real 0.0 .. 1000.0;
 

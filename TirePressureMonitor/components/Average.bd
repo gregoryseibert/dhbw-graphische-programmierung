@@ -1,11 +1,11 @@
-classType lib.average.Average
+classType components.Average
 blockdiagramSpecification Main {
-	methodBody calc {
+	methodBody calculateAverage {
 		outPin active {
 			connection_7
 		}
 	}
-	methodArgumentIdentifier calc.inputVal1 at (21, 25) {
+	methodArgumentIdentifier calculateAverage.inputVal1 at (21, 25) {
 		label at (0, -1)
 		outPin {
 			connection_1
@@ -14,7 +14,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.inputVal2 at (21, 65) {
+	methodArgumentIdentifier calculateAverage.inputVal2 at (21, 65) {
 		label at (0, -1)
 		outPin {
 			connection_2
@@ -23,7 +23,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.inputVal3 at (21, 105) {
+	methodArgumentIdentifier calculateAverage.inputVal3 at (21, 105) {
 		label at (0, -1)
 		outPin {
 			connection_3
@@ -32,7 +32,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.inputVal4 at (21, 145) {
+	methodArgumentIdentifier calculateAverage.inputVal4 at (21, 145) {
 		label at (0, -1)
 		outPin {
 			connection_4

@@ -1,4 +1,4 @@
-package lib.integrator;
+package components;
 
 class Integrator {
 	real memory = 0.0;

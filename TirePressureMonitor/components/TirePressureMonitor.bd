@@ -1,11 +1,11 @@
 classType components.TirePressureMonitor
 blockdiagramSpecification Main {
-	methodBody calc {
+	methodBody checkTirePressure {
 		outPin active {
-			connection_5, connection_15, connection_17, connection_19, connection_21
+			connection_15, connection_17, connection_19, connection_21, connection_29
 		}
 	}
-	methodArgumentIdentifier calc.vFrontLeft at (41, 95) {
+	methodArgumentIdentifier checkTirePressure.vFrontLeft at (21, 95) {
 		label at (0, -1)
 		outPin {
 			connection_7
@@ -14,7 +14,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.vFrontRight at (41, 165) {
+	methodArgumentIdentifier checkTirePressure.vFrontRight at (21, 165) {
 		label at (0, -1)
 		outPin {
 			connection_8
@@ -23,7 +23,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.vRearLeft at (41, 235) {
+	methodArgumentIdentifier checkTirePressure.vRearLeft at (21, 235) {
 		label at (0, -1)
 		outPin {
 			connection_9
@@ -32,7 +32,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.vRearRight at (41, 305) {
+	methodArgumentIdentifier checkTirePressure.vRearRight at (21, 305) {
 		label at (0, -1)
 		outPin {
 			connection_10
@@ -41,48 +41,41 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	complexIdentifier averageCalculator at (441, 171) size (12, 5) {
+	complexIdentifier averageComponent at (431, 171) size (15, 5) {
 		label at (-10, 1)
-		methodCall lib.average.Average.calc {
+		methodCall components.Average.calculateAverage {
 			argumentPin inputVal1 at (left, 0) connection_11 {
-				bendpoints (70, 0), (70, 90)
+				bendpoints (100, 0), (100, 90)
 			}
 			argumentPin inputVal2 at (left, 1) connection_12 {
-				bendpoints (60, 0), (60, 30)
+				bendpoints (90, 0), (90, 30)
 			}
 			argumentPin inputVal3 at (left, 2) connection_13 {
-				bendpoints (60, 0), (60, -30)
+				bendpoints (90, 0), (90, -30)
 			}
 			argumentPin inputVal4 at (left, 3) connection_14 {
-				bendpoints (70, 0), (70, -90)
+				bendpoints (100, 0), (100, -90)
 			}
 			returnPin at (right, 0) {
-				connection_6
+				connection_23
 			}
 			sequenceCall {
 				inPin
 			}
 		}
 	}
-	simpleIdentifier average at (601, 175) {
-		label at (0, -1)
-		inPin connection_6
-		outPin sequenceCall {
-			inPin connection_5
-		}
-	}
-	complexIdentifier Integrator_instance at (181, 81) size (9, 3) {
+	complexIdentifier integratorComponent at (211, 81) size (9, 3) {
 		label at (0, 1)
-		methodCall lib.integrator.Integrator.integrate {
+		methodCall components.Integrator.integrate {
 			argumentPin dTVal at (left, 0) connection_16 {
-				bendpoints (90, 0)
+				bendpoints (140, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_7
 			sequenceCall at (90, -24) {
 				inPin connection_15
 			}
 		}
-		methodCall lib.integrator.Integrator.outVal {
+		methodCall components.Integrator.outVal {
 			returnPin at (right, 0) {
 				connection_11
 			}
@@ -91,18 +84,18 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	complexIdentifier Integrator_instance at (181, 151) size (9, 3) {
+	complexIdentifier integratorComponent at (211, 151) size (9, 3) {
 		label at (0, 1)
-		methodCall lib.integrator.Integrator.integrate {
+		methodCall components.Integrator.integrate {
 			argumentPin dTVal at (left, 0) connection_18 {
-				bendpoints (90, 0)
+				bendpoints (140, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_8
 			sequenceCall at (90, -24) {
 				inPin connection_17
 			}
 		}
-		methodCall lib.integrator.Integrator.outVal {
+		methodCall components.Integrator.outVal {
 			returnPin at (right, 0) {
 				connection_12
 			}
@@ -111,18 +104,18 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	complexIdentifier Integrator_instance at (181, 221) size (9, 3) {
+	complexIdentifier integratorComponent at (211, 221) size (9, 3) {
 		label at (0, 1)
-		methodCall lib.integrator.Integrator.integrate {
+		methodCall components.Integrator.integrate {
 			argumentPin dTVal at (left, 0) connection_20 {
-				bendpoints (90, 0)
+				bendpoints (140, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_9
 			sequenceCall at (90, -24) {
 				inPin connection_19
 			}
 		}
-		methodCall lib.integrator.Integrator.outVal {
+		methodCall components.Integrator.outVal {
 			returnPin at (right, 0) {
 				connection_13
 			}
@@ -131,18 +124,18 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	complexIdentifier Integrator_instance at (181, 291) size (9, 3) {
+	complexIdentifier integratorComponent at (211, 291) size (9, 3) {
 		label at (0, 1)
-		methodCall lib.integrator.Integrator.integrate {
+		methodCall components.Integrator.integrate {
 			argumentPin dTVal at (left, 0) connection_22 {
-				bendpoints (90, 0)
+				bendpoints (140, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_10
 			sequenceCall at (90, -24) {
 				inPin connection_21
 			}
 		}
-		methodCall lib.integrator.Integrator.outVal {
+		methodCall components.Integrator.outVal {
 			returnPin at (right, 0) {
 				connection_14
 			}
@@ -151,13 +144,82 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	methodArgumentIdentifier calc.dTVal at (41, 25) {
+	methodArgumentIdentifier checkTirePressure.dTVal at (21, 25) {
 		label at (0, -1)
 		outPin {
 			connection_18, connection_20, connection_22, connection_16
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	complexIdentifier deviationDetectorComponent at (771, 51) size (16, 19) {
+		label at (-40, 1)
+		methodCall components.DeviationDetector.checkForDeviation {
+			argumentPin inputVal1 at (left, 0) connection_28
+			argumentPin inputVal2 at (left, 3) connection_27
+			argumentPin inputVal3 at (left, 6) connection_26
+			argumentPin inputVal4 at (left, 9) connection_25
+			argumentPin referenceVal at (left, 12) connection_23
+			argumentPin deviationThreshold at (left, 17) connection_24
+			returnPin at (right, 9) {
+				connection_30
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier deviationThreshold at (581, 225) {
+		label at (0, -1)
+		outPin {
+			connection_24
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkTirePressure.vFrontLeft at (581, 55) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkTirePressure.vFrontRight at (581, 85) {
+		label at (0, -1)
+		outPin {
+			connection_27
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkTirePressure.vRearLeft at (581, 115) {
+		label at (0, -1)
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier checkTirePressure.vRearRight at (581, 145) {
+		label at (0, -1)
+		outPin {
+			connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (961, 145) {
+		label at (0, 0)
+		inPin connection_30
+		sequenceCall {
+			inPin connection_29
 		}
 	}
 }

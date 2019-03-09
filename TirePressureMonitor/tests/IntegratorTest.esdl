@@ -1,4 +1,6 @@
-package lib.integrator;
+package tests;
+
+import components.Integrator;
 
 static class IntegratorTest {
 	Integrator tester;
