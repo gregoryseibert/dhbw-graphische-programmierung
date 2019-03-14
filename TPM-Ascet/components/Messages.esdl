@@ -6,3 +6,7 @@ data interface velocityMessage {
 	real vRearLeft = 0.0;
 	real vRearRight = 0.0;
 }
+
+data interface deviationMessage {
+	boolean deviationDetected = false;
+}

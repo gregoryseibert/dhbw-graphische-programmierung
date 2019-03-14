@@ -2,7 +2,7 @@ classType components.TirePressureMonitor
 blockdiagramSpecification Main {
 	methodBody checkTirePressure {
 		outPin active {
-			connection_173, connection_175, connection_177, connection_179, connection_119
+			connection_175, connection_173, connection_177, connection_179, connection_182
 		}
 	}
 	simpleIdentifier deviationThreshold at (581, 165) {
@@ -21,13 +21,6 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall {
 			inPin
-		}
-	}
-	simpleIdentifier detectedTirePressureDeviation at (871, 265) {
-		label at (0, -1)
-		inPin connection_120
-		outPin sequenceCall {
-			inPin connection_119
 		}
 	}
 	complexIdentifier components.Average at (421, 161) size (14, 5) {
@@ -71,7 +64,7 @@ blockdiagramSpecification Main {
 			argumentPin referenceVal at (left, 8) connection_181
 			argumentPin deviationThreshold at (left, 5) connection_114
 			returnPin at (right, 15) {
-				connection_120
+				connection_183
 			}
 			sequenceCall {
 				inPin
@@ -192,6 +185,13 @@ blockdiagramSpecification Main {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	simpleIdentifier components.deviationMessage.deviationDetected at (871, 265) {
+		label at (0, -1)
+		inPin connection_183
+		sequenceCall {
+			inPin connection_182
 		}
 	}
 }
