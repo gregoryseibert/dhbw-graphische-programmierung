@@ -5,8 +5,6 @@ import assertLib.Assert;
 import components.DeviationDetector;
 
 static class DeviationDetectorTest {
-	DeviationDetector detector;
-	
 	@Test
 	public void testDeviationDetectorPositiveNumbers() {
 		real inputVal1 = 100.0;
@@ -16,7 +14,7 @@ static class DeviationDetectorTest {
 		real referenceVal = 100.0;
 		real threshold = 0.05;
 		
-		boolean deviationDetected = detector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
+		boolean deviationDetected = DeviationDetector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
 		
 		Assert.assertFalse(deviationDetected);
 	}
@@ -30,7 +28,7 @@ static class DeviationDetectorTest {
 		real referenceVal = 100.0;
 		real threshold = 0.05;
 		
-		boolean deviationDetected = detector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
+		boolean deviationDetected = DeviationDetector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
 		
 		Assert.assertTrue(deviationDetected);
 	}
@@ -44,7 +42,7 @@ static class DeviationDetectorTest {
 		real referenceVal = -100.0;
 		real threshold = 0.05;
 		
-		boolean deviationDetected = detector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
+		boolean deviationDetected = DeviationDetector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
 		
 		Assert.assertFalse(deviationDetected);
 	}
@@ -58,7 +56,7 @@ static class DeviationDetectorTest {
 		real referenceVal = 0.0;
 		real threshold = 0.05;
 		
-		boolean deviationDetected = detector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
+		boolean deviationDetected = DeviationDetector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
 		
 		Assert.assertFalse(deviationDetected);
 	}
@@ -72,7 +70,7 @@ static class DeviationDetectorTest {
 		real referenceVal = -100.0;
 		real threshold = 0.05;
 		
-		boolean deviationDetected = detector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
+		boolean deviationDetected = DeviationDetector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
 		
 		Assert.assertTrue(deviationDetected);
 	}
@@ -86,7 +84,7 @@ static class DeviationDetectorTest {
 		real referenceVal = -100.0;
 		real threshold = 0.05;
 		
-		boolean deviationDetected = detector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
+		boolean deviationDetected = DeviationDetector.checkForDeviation(inputVal1, inputVal2, inputVal3, inputVal4, referenceVal, threshold);
 		
 		Assert.assertTrue(deviationDetected);
 	}

@@ -1,0 +1,42 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Experiment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Experiment.xsd" xsi:type="ETAS.EE.Data.ExperimentType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID89f49dda-5530-4981-a0dc-76dbd0a8061d" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="IDc3ce6490-cfc5-4637-9dd2-34010eb1863a" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID22273820-50d4-4920-895a-1d52f3d4312e" pluginID="FilterDataPlugin" rootFolder="FilterDataPlugin_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID4894abab-7480-4a16-8986-94c578f2a039" type="" name="FilterConfigurations" file="FilterConfigurations.xml" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDc49f4063-0464-43a4-b728-e23844df1d66" pluginID="InstrumentationPlugin" rootFolder="InstrumentationPlugin_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID83046dd2-d5db-4145-8a24-eb4b4c03a6f1" type="" name="WidgetsUIData" file="WidgetsUI.xml" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID032cc26c-b9a8-41b6-9057-132a1dfd8f99" pluginID="DataloggerPlugin" rootFolder="DataloggerPlugin_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="IDae9dda70-2228-41fd-943a-ffbb807be8ec" type="" name="DataloggerData" file="Datalogger.xml" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID391c85f5-5a91-4890-89cb-178d48c5dd63" pluginID="CommonSignalGeneratorPlugin" rootFolder="CommonSignalGeneratorPlugin_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="IDb0d332ef-97f4-42b6-9e2c-8c3338c69f7d" type="" name="SGConfiguration" file="SignalGenerator.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <ExperimentFiles xsi:type="ETAS.EE.Data.ExperimentFilesType">
+    <mappingFiles xsi:type="ETAS.EE.Data.MappingFileListType" />
+    <dataloggerCfgFiles xsi:type="ETAS.EE.Data.DataloggerCfgFileListType" />
+    <parameterFiles xsi:type="ETAS.EE.Data.ParameterFileListType" />
+    <rtPluginFiles xsi:type="ETAS.EE.Data.RTPluginFileListType" />
+    <scriptRecorderFiles xsi:type="ETAS.EE.Data.ScriptRecorderFileListType" />
+  </ExperimentFiles>
+  <ExperimentInfo xsi:type="ETAS.EE.Data.ExperimentInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID82dcb4d5-c3a9-4a26-9fc1-146c23f671bd" Created="2019-03-14T11:07:50.476Z" LastOpened="2019-03-14T11:07:50.476Z" LastSaved="2019-03-14T11:07:50.786Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="IDbdf0443c-98a5-4353-974d-8713507ac704" Created="3.7.6.132" LastSaved="3.7.6.132" MinRequired="3.7" />
+  </ExperimentInfo>
+  <ExperimentEventHooks xsi:type="ETAS.EE.Data.EventHooksListType" />
+</Experiment>

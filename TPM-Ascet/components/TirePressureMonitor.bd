@@ -2,61 +2,13 @@ classType components.TirePressureMonitor
 blockdiagramSpecification Main {
 	methodBody checkTirePressure {
 		outPin active {
-			connection_80, connection_82, connection_84, connection_86, connection_112, connection_105
-		}
-	}
-	complexIdentifier averageComponent at (481, 161) size (15, 5) {
-		label at (0, 1)
-		methodCall components.Average.calculateAverage {
-			argumentPin inputVal1 at (left, 0) connection_88 {
-				bendpoints (100, 0)
-			}
-			argumentPin inputVal2 at (left, 1) connection_91 {
-				bendpoints (80, 0), (80, 30)
-			}
-			argumentPin inputVal3 at (left, 2) connection_90 {
-				bendpoints (80, 0), (80, -30)
-			}
-			argumentPin inputVal4 at (left, 3) connection_89 {
-				bendpoints (100, 0)
-			}
-			returnPin at (right, 3) {
-				connection_113
-			}
-			sequenceCall {
-				inPin
-			}
-		}
-	}
-	complexIdentifier deviationDetectorComponent at (781, 111) size (16, 15) {
-		label at (-40, 1)
-		methodCall components.DeviationDetector.checkForDeviation {
-			argumentPin inputVal1 at (left, 0) connection_92 {
-				bendpoints (100, 0), (100, 40)
-			}
-			argumentPin inputVal2 at (left, 2) connection_93 {
-				bendpoints (80, 0), (80, -10)
-			}
-			argumentPin inputVal3 at (left, 11) connection_95 {
-				bendpoints (80, 0), (80, 10)
-			}
-			argumentPin inputVal4 at (left, 13) connection_96 {
-				bendpoints (100, 0), (100, -40)
-			}
-			argumentPin referenceVal at (left, 8) connection_107
-			argumentPin deviationThreshold at (left, 5) connection_24
-			returnPin at (right, 7) {
-				connection_106
-			}
-			sequenceCall {
-				inPin
-			}
+			connection_80, connection_82, connection_84, connection_86, connection_105, connection_119
 		}
 	}
 	simpleIdentifier deviationThreshold at (651, 165) {
 		label at (0, -1)
 		outPin {
-			connection_24
+			connection_114
 		}
 		sequenceCall {
 			inPin
@@ -66,7 +18,7 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		inPin connection_81
 		outPin {
-			connection_92, connection_88
+			connection_121, connection_107
 		}
 		sequenceCall {
 			inPin connection_80
@@ -76,7 +28,7 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		inPin connection_83
 		outPin {
-			connection_93, connection_91
+			connection_122, connection_110
 		}
 		sequenceCall {
 			inPin connection_82
@@ -86,7 +38,7 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		inPin connection_87
 		outPin {
-			connection_96, connection_89
+			connection_124, connection_108
 		}
 		sequenceCall {
 			inPin connection_86
@@ -96,7 +48,7 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		inPin connection_85
 		outPin {
-			connection_95, connection_90
+			connection_123, connection_109
 		}
 		sequenceCall {
 			inPin connection_84
@@ -207,21 +159,69 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier detectedTirePressureDeviation at (981, 185) {
+	simpleIdentifier detectedTirePressureDeviation at (1001, 265) {
 		label at (0, -1)
-		inPin connection_106
+		inPin connection_120
 		outPin sequenceCall {
-			inPin connection_105
+			inPin connection_119
 		}
 	}
 	simpleIdentifier averageDistance at (641, 195) {
 		label at (10, -1)
-		inPin connection_113
+		inPin connection_106
 		outPin {
-			connection_107
+			connection_111
 		}
-		sequenceCall at (30, -4) {
-			inPin connection_112
+		sequenceCall at (0, 26) {
+			inPin connection_105
+		}
+	}
+	complexIdentifier components.Average at (491, 161) size (14, 5) {
+		label at (0, 1)
+		methodCall components.Average.calculateAverage {
+			argumentPin inputVal1 at (left, 0) connection_107 {
+				bendpoints (110, 0)
+			}
+			argumentPin inputVal2 at (left, 1) connection_110 {
+				bendpoints (100, 0), (100, 30)
+			}
+			argumentPin inputVal3 at (left, 2) connection_109 {
+				bendpoints (100, 0), (100, -30)
+			}
+			argumentPin inputVal4 at (left, 3) connection_108 {
+				bendpoints (110, 0)
+			}
+			returnPin at (right, 3) {
+				connection_106
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier components.DeviationDetector at (821, 111) size (14, 17) {
+		label at (0, 1)
+		methodCall components.DeviationDetector.checkForDeviation {
+			argumentPin inputVal1 at (left, 0) connection_121 {
+				bendpoints (110, 0), (110, 40)
+			}
+			argumentPin inputVal2 at (left, 1) connection_122 {
+				bendpoints (100, 0), (100, -20)
+			}
+			argumentPin inputVal3 at (left, 12) connection_123 {
+				bendpoints (100, 0), (100, 20)
+			}
+			argumentPin inputVal4 at (left, 13) connection_124 {
+				bendpoints (110, 0), (110, -40)
+			}
+			argumentPin referenceVal at (left, 8) connection_111
+			argumentPin deviationThreshold at (left, 5) connection_114
+			returnPin at (right, 15) {
+				connection_120
+			}
+			sequenceCall {
+				inPin
+			}
 		}
 	}
 }

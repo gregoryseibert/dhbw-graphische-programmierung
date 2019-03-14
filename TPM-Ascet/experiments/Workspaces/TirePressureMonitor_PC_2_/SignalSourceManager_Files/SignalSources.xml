@@ -1,0 +1,13 @@
+<?SCHEMA schemaVersion="1.0"?>
+<SignalSourcesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.SignalSources.xsd" xsi:type="ETAS.EE.Data.SignalSourcesConfigurationType">
+  <SignalSourcesData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID6e20d3c6-2472-40e0-8d42-75d1691f18f7" pluginID="System" rootFolder="System_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID8a5f74a4-f239-4a37-b4d3-f88cc9bcc149" type="" name="Configuration" file="Configuration.xml" />
+      </Documents>
+    </Item>
+  </SignalSourcesData>
+  <SignalSourceDeclarations xsi:type="ETAS.EE.Data.SignalSourceDeclarationListType">
+    <Item xsi:type="ETAS.EE.Data.SignalSourceDeclarationType" id="ID44e561c0-90c2-40e7-a0ed-f0b116bb9950" type="VP" signalSourceId="System" name="TirePressureMonitor_PC_2_" active="true" />
+  </SignalSourceDeclarations>
+</SignalSourcesConfiguration>

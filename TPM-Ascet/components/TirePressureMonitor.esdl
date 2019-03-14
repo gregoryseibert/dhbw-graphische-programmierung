@@ -7,8 +7,6 @@ static class TirePressureMonitor {
 	characteristic real vRearLeft = 0.0;
 	characteristic real vRearRight = 0.0;
 	
-	Average averageComponent;
-	DeviationDetector deviationDetectorComponent;
 	Integrator integratorComponent;
 	
 	real distanceFrontLeft = 0.0;
@@ -16,6 +14,7 @@ static class TirePressureMonitor {
 	real distanceRearRight = 0.0;
 	real distanceRearLeft = 0.0;
 	real averageDistance = 0.0;
+	
 	boolean detectedTirePressureDeviation = false;
 
 	@thread
@@ -25,7 +24,7 @@ static class TirePressureMonitor {
 		distanceFrontRight = integratorComponent.integrate(DeltaTimeService.deltaT, vFrontRight); // Main/checkTirePressure 2
 		distanceRearLeft = integratorComponent.integrate(DeltaTimeService.deltaT, vRearLeft); // Main/checkTirePressure 3
 		distanceRearRight = integratorComponent.integrate(DeltaTimeService.deltaT, vRearRight); // Main/checkTirePressure 4
-		averageDistance = averageComponent.calculateAverage(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight); // Main/checkTirePressure 5
-		detectedTirePressureDeviation = deviationDetectorComponent.checkForDeviation(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight, averageDistance, deviationThreshold); // Main/checkTirePressure 6
+		averageDistance = Average.calculateAverage(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight); // Main/checkTirePressure 5
+		detectedTirePressureDeviation = DeviationDetector.checkForDeviation(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight, averageDistance, deviationThreshold); // Main/checkTirePressure 6
 	}
 }

@@ -1,6 +1,6 @@
 package components;
 
-class DeviationDetector {
+static class DeviationDetector {
 	@no_side_effect
 	@generated("blockdiagram")
 	public boolean checkForDeviation(real in inputVal1, real in inputVal2, real in inputVal3, real in inputVal4, real in referenceVal, real in deviationThreshold) {

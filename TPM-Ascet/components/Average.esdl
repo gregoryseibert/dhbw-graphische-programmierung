@@ -1,6 +1,6 @@
 package components;
 
-class Average {
+static class Average {
 	const real numberOfItems = 4.0;
 
 	@no_side_effect
