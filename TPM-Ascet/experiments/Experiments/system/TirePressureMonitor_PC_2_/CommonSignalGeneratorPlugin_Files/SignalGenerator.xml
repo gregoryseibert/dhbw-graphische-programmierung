@@ -1,7 +1,95 @@
 <?SCHEMA schemaVersion="1.0"?>
 <SGConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.CommonSignalGenerator.xsd" xsi:type="ETAS.EE.Data.SignalGenerator.SGConfigurationType">
-  <signalDescriptionSets xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetListType" />
-  <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionListType" />
-  <signalMappings xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingListType" />
-  <signalGenerators xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorListType" />
+  <signalDescriptionSets xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetType" id="ID1311917f-acc4-45a9-a578-402f828eb3b5" name="SignalDescriptionSet" comment="" repetitions="1">
+      <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID5eced6e9-d421-469c-b6bf-e1103038e5cb" />
+      </signalDescriptions>
+    </item>
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetType" id="ID819329f8-f897-4b66-8319-a0fe5d5c98d8" name="SignalDescriptionSet_1" comment="" repetitions="1">
+      <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID2f5ad6f1-9e6f-4c04-b5b2-88fc2441de19" />
+      </signalDescriptions>
+    </item>
+  </signalDescriptionSets>
+  <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionType" id="ID5eced6e9-d421-469c-b6bf-e1103038e5cb" name="Standard" comment="">
+      <signalSegments xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="10000000000" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantType">
+              <value xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="100" />
+              </value>
+            </constant>
+          </waveForm>
+        </item>
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="3000000000" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantType">
+              <value xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0" />
+              </value>
+            </constant>
+          </waveForm>
+        </item>
+      </signalSegments>
+    </item>
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionType" id="ID2f5ad6f1-9e6f-4c04-b5b2-88fc2441de19" name="Deviation" comment="">
+      <signalSegments xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="5000000000" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantType">
+              <value xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="100" />
+              </value>
+            </constant>
+          </waveForm>
+        </item>
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="5000000000" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantType">
+              <value xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="94.7" />
+              </value>
+            </constant>
+          </waveForm>
+        </item>
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="3000000000" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantType">
+              <value xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0" />
+              </value>
+            </constant>
+          </waveForm>
+        </item>
+      </signalSegments>
+    </item>
+  </signalDescriptions>
+  <signalMappings xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingType" id="IDad554e3c-87d3-4b53-b690-02dee13305ff" name="Mapping">
+      <mappingItems xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="ID70fd4a0b-de5f-4e9a-a9d0-0fcaa3a88ee1" label="components.TirePressureMonitor.vFrontLeft" task="Task0">
+          <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID5eced6e9-d421-469c-b6bf-e1103038e5cb" />
+        </item>
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="ID472d3497-85e5-4cb3-b4e0-36a046e30da1" label="components.TirePressureMonitor.vFrontRight" task="Task0">
+          <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID5eced6e9-d421-469c-b6bf-e1103038e5cb" />
+        </item>
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="IDc67961dd-bfe1-42bf-810b-c37eb4e82e6e" label="components.TirePressureMonitor.vRearLeft" task="Task0">
+          <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID5eced6e9-d421-469c-b6bf-e1103038e5cb" />
+        </item>
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="ID86e13424-dea1-4d3e-a162-3ad260558915" label="components.TirePressureMonitor.vRearRight" task="Task0">
+          <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID2f5ad6f1-9e6f-4c04-b5b2-88fc2441de19" />
+        </item>
+      </mappingItems>
+    </item>
+  </signalMappings>
+  <signalGenerators xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorType" id="ID6ad6ada7-4f1e-4be7-a57a-35c127c4ba13" instanceId="0" name="SignalGenerator" startTime="0" stopBehaviour="StartValue">
+      <mapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorMappingContainerType" mappingChange="Dynamically">
+        <signalMapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingRefType" idRef="IDad554e3c-87d3-4b53-b690-02dee13305ff" />
+      </mapping>
+    </item>
+  </signalGenerators>
 </SGConfiguration>

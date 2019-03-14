@@ -1,30 +1,21 @@
 package components;
 
-static class TirePressureMonitor {
-	characteristic real deviationThreshold = 0.05;
-	characteristic real vFrontLeft = 0.0;
-	characteristic real vFrontRight = 0.0;
-	characteristic real vRearLeft = 0.0;
-	characteristic real vRearRight = 0.0;
-	
-	Integrator integratorComponent;
-	
-	real distanceFrontLeft = 0.0;
-	real distanceFrontRight = 0.0;
-	real distanceRearRight = 0.0;
-	real distanceRearLeft = 0.0;
-	real averageDistance = 0.0;
-	
+static class TirePressureMonitor
+reads velocityMessage.vFrontLeft, velocityMessage.vFrontRight, velocityMessage.vRearLeft, velocityMessage.vRearRight {
+	characteristic real deviationThreshold = 0.005; //0.5 percent
 	boolean detectedTirePressureDeviation = false;
+	Integrator Integrator_instance1;
+	Integrator Integrator_instance2;
+	Integrator Integrator_instance3;
+	Integrator Integrator_instance4;
 
 	@thread
 	@generated("blockdiagram")
 	public void checkTirePressure() {
-		distanceFrontLeft = integratorComponent.integrate(DeltaTimeService.deltaT, vFrontLeft); // Main/checkTirePressure 1
-		distanceFrontRight = integratorComponent.integrate(DeltaTimeService.deltaT, vFrontRight); // Main/checkTirePressure 2
-		distanceRearLeft = integratorComponent.integrate(DeltaTimeService.deltaT, vRearLeft); // Main/checkTirePressure 3
-		distanceRearRight = integratorComponent.integrate(DeltaTimeService.deltaT, vRearRight); // Main/checkTirePressure 4
-		averageDistance = Average.calculateAverage(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight); // Main/checkTirePressure 5
-		detectedTirePressureDeviation = DeviationDetector.checkForDeviation(distanceFrontLeft, distanceFrontRight, distanceRearLeft, distanceRearRight, averageDistance, deviationThreshold); // Main/checkTirePressure 6
+		Integrator_instance2.integrate(DeltaTimeService.deltaT, velocityMessage.vFrontRight); // Main/checkTirePressure 1
+		Integrator_instance1.integrate(DeltaTimeService.deltaT, velocityMessage.vFrontLeft); // Main/checkTirePressure 2
+		Integrator_instance3.integrate(DeltaTimeService.deltaT, velocityMessage.vRearLeft); // Main/checkTirePressure 3
+		Integrator_instance4.integrate(DeltaTimeService.deltaT, velocityMessage.vRearRight); // Main/checkTirePressure 4
+		detectedTirePressureDeviation = DeviationDetector.checkForDeviation(Integrator_instance1.outVal(), Integrator_instance2.outVal(), Integrator_instance3.outVal(), Integrator_instance4.outVal(), Average.calculateAverage(Integrator_instance1.outVal(), Integrator_instance2.outVal(), Integrator_instance3.outVal(), Integrator_instance4.outVal()), deviationThreshold); // Main/checkTirePressure 5
 	}
 }
