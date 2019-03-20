@@ -14,4 +14,9 @@ class Integrator {
 	public real outVal() {
 		return memory;
 	}
+
+	@generated("blockdiagram")
+	public void resetMemory() {
+		memory = 0.0;
+	}
 }

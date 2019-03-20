@@ -1,0 +1,346 @@
+classType components.SystemTest
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_66, connection_69, connection_72, connection_76, connection_78
+		}
+	}
+	simpleIdentifier components.velocityMessage.vFrontLeft at (671, 55) {
+		label at (0, -1)
+		inPin connection_70
+		sequenceCall {
+			inPin connection_69
+		}
+	}
+	complexIdentifier RandomNumberGenerator_instance at (211, 31) size (14, 4) {
+		label at (0, 1)
+		methodCall components.RandomNumberGenerator.calc {
+			argumentPin parameterA at (left, 0) connection_8 {
+				bendpoints (150, 0)
+			}
+			argumentPin parameterC at (left, 1) connection_9
+			argumentPin parameterM at (left, 2) connection_10 {
+				bendpoints (150, 0)
+			}
+			returnPin at (right, 0) {
+				connection_43
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier parameterANormal at (11, 15) {
+		label at (0, -1)
+		outPin {
+			connection_8
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterCNormal at (11, 45) {
+		label at (0, -1)
+		outPin {
+			connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterMNormal at (11, 75) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterCNormal at (11, 155) {
+		label at (0, -1)
+		outPin {
+			connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterMNormal at (11, 185) {
+		label at (0, -1)
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterANormal at (11, 125) {
+		label at (0, -1)
+		outPin {
+			connection_24
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterCNormal at (11, 375) {
+		label at (0, -1)
+		outPin {
+			connection_29
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterMNormal at (11, 405) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterANormal at (11, 345) {
+		label at (0, -1)
+		outPin {
+			connection_27
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier RandomNumberGenerator_instance_2 at (211, 141) size (14, 4) {
+		label at (0, 1)
+		methodCall components.RandomNumberGenerator.calc {
+			argumentPin parameterA at (left, 0) connection_24 {
+				bendpoints (150, 0)
+			}
+			argumentPin parameterC at (left, 1) connection_25
+			argumentPin parameterM at (left, 2) connection_26 {
+				bendpoints (150, 0)
+			}
+			returnPin at (right, 0) {
+				connection_52
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier RandomNumberGenerator_instance_3 at (211, 251) size (14, 4) {
+		label at (0, 1)
+		methodCall components.RandomNumberGenerator.calc {
+			argumentPin parameterA at (left, 0) connection_32 {
+				bendpoints (150, 0)
+			}
+			argumentPin parameterC at (left, 1) connection_33
+			argumentPin parameterM at (left, 2) connection_34 {
+				bendpoints (150, 0)
+			}
+			returnPin at (right, 0) {
+				connection_47
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	complexIdentifier RandomNumberGenerator_instance_4 at (211, 361) size (14, 4) {
+		label at (0, 1)
+		methodCall components.RandomNumberGenerator.calc {
+			argumentPin parameterA at (left, 0) connection_27 {
+				bendpoints (150, 0)
+			}
+			argumentPin parameterC at (left, 1) connection_29
+			argumentPin parameterM at (left, 2) connection_28 {
+				bendpoints (150, 0)
+			}
+			returnPin at (right, 0) {
+				connection_59
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier components.velocityMessage.vFrontRight at (671, 165) {
+		label at (0, -1)
+		inPin connection_73
+		sequenceCall {
+			inPin connection_72
+		}
+	}
+	simpleIdentifier components.velocityMessage.vRearRight at (671, 385) {
+		label at (0, 9)
+		inPin connection_77
+		sequenceCall {
+			inPin connection_76
+		}
+	}
+	simpleIdentifier parameterADeviation at (11, 235) {
+		label at (0, -1)
+		outPin {
+			connection_32
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterCDeviation at (11, 265) {
+		label at (0, -1)
+		outPin {
+			connection_33
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier parameterMDeviation at (11, 295) {
+		label at (0, -1)
+		outPin {
+			connection_34
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier components.velocityMessage.vRearLeft at (671, 275) {
+		label at (0, 9)
+		inPin connection_79
+		sequenceCall {
+			inPin connection_78
+		}
+	}
+	multiplication at (541, 36) {
+		inPin connection_44
+		inPin connection_38 {
+			bendpoints (220, 0), (220, -160)
+		}
+		outPin {
+			connection_68
+		}
+	}
+	simpleIdentifier numberGain at (271, 215) {
+		label at (0, -1)
+		outPin {
+			connection_51, connection_54, connection_61, connection_38
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	typeConverter real at (421, 31) {
+		inPin connection_43
+		outPin {
+			connection_44
+		}
+	}
+	multiplication at (541, 256) {
+		inPin connection_48
+		inPin connection_51 {
+			bendpoints (220, 0), (220, 60)
+		}
+		outPin {
+			connection_84
+		}
+	}
+	typeConverter real at (421, 251) {
+		inPin connection_47
+		outPin {
+			connection_48
+		}
+	}
+	typeConverter real at (421, 141) {
+		inPin connection_52
+		outPin {
+			connection_53
+		}
+	}
+	multiplication at (541, 146) {
+		inPin connection_53
+		inPin connection_54 {
+			bendpoints (220, 0), (220, -50)
+		}
+		outPin {
+			connection_71
+		}
+	}
+	multiplication at (541, 366) {
+		inPin connection_60
+		inPin connection_61 {
+			bendpoints (220, 0), (220, 170)
+		}
+		outPin {
+			connection_85
+		}
+	}
+	typeConverter real at (421, 361) {
+		inPin connection_59
+		outPin {
+			connection_60
+		}
+	}
+	simpleIdentifier recalibrate at (11, 495) {
+		label at (0, -1)
+		outPin {
+			connection_67
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier components.deviationMessage.recalibrate at (201, 495) {
+		label at (0, -1)
+		inPin connection_67
+		sequenceCall {
+			inPin connection_66
+		}
+	}
+	simpleIdentifier baseSignal at (541, 215) {
+		label at (0, -1)
+		outPin {
+			connection_83, connection_86, connection_87, connection_80
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (631, 376) {
+		inPin connection_85
+		inPin connection_87 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_77
+		}
+	}
+	addition at (631, 266) {
+		inPin connection_84
+		inPin connection_86 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_79
+		}
+	}
+	addition at (631, 156) {
+		inPin connection_71
+		inPin connection_80 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_73
+		}
+	}
+	addition at (631, 46) {
+		inPin connection_68
+		inPin connection_83 {
+			bendpoints (50, 0)
+		}
+		outPin {
+			connection_70
+		}
+	}
+}

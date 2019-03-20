@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 2432715145
+		         /* programm id */ 3061856149
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -99,66 +99,10 @@
 			/end IF_DATA
 		/end CHARACTERISTIC
 
-		/begin CHARACTERISTIC components.TirePressureMonitor.vFrontLeft
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x434004
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 5
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC components.TirePressureMonitor.vFrontRight
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x434008
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 6
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC components.TirePressureMonitor.vRearLeft
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x43400C
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 7
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC components.TirePressureMonitor.vRearRight
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x434010
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 8
-			/end IF_DATA
-		/end CHARACTERISTIC
-
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance1.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434014
+			/* ecu address        */ 0x434004
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -172,7 +116,7 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance2.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434018
+			/* ecu address        */ 0x434008
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -186,7 +130,7 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance3.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x43401C
+			/* ecu address        */ 0x43400C
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -200,7 +144,7 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance4.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434020
+			/* ecu address        */ 0x434010
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -211,91 +155,6 @@
 			/end IF_DATA
 		/end CHARACTERISTIC
 
-		/begin MEASUREMENT components.TirePressureMonitor.distanceFrontLeft
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451024
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 9
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT components.TirePressureMonitor.distanceFrontRight
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451028
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 10
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT components.TirePressureMonitor.distanceRearRight
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451030
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 11
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT components.TirePressureMonitor.distanceRearLeft
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x45102C
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 12
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT components.TirePressureMonitor.averageDistance
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451020
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 13
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT components.TirePressureMonitor.detectedTirePressureDeviation
-			/* long identifier    */ ""
-			/* datatype           */ UBYTE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ 0
-			/* upper limit        */ 1
-			ECU_ADDRESS 0x451034
-			BIT_MASK 0x1
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 14
-			/end IF_DATA
-		/end MEASUREMENT
-
 		/begin MEASUREMENT components.TirePressureMonitor.Integrator_instance1.memory
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
@@ -304,7 +163,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451038
+			ECU_ADDRESS 0x451024
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 0 1000 0
 			/end IF_DATA
@@ -318,7 +177,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x45103C
+			ECU_ADDRESS 0x451028
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 0
 			/end IF_DATA
@@ -332,7 +191,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451040
+			ECU_ADDRESS 0x45102C
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 2 1000 0
 			/end IF_DATA
@@ -346,9 +205,80 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451044
+			ECU_ADDRESS 0x451030
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 3 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.velocityMessage.vFrontLeft
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x451040
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.velocityMessage.vFrontRight
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x45103C
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.velocityMessage.vRearLeft
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x451038
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.velocityMessage.vRearRight
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x451034
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.deviationMessage.deviationDetected
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x451020
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1001 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -365,7 +295,6 @@
 			/begin SUB_FUNCTION
 				components.TirePressureMonitor
 				components.Average
-				components.DeltaTimeService
 				components.DeviationDetector
 			/end SUB_FUNCTION
 		/end FUNCTION
@@ -374,19 +303,16 @@
 			""
 			/begin DEF_CHARACTERISTIC
 				components.TirePressureMonitor.deviationThreshold
-				components.TirePressureMonitor.vFrontLeft
-				components.TirePressureMonitor.vFrontRight
-				components.TirePressureMonitor.vRearLeft
-				components.TirePressureMonitor.vRearRight
 			/end DEF_CHARACTERISTIC
-			/begin LOC_MEASUREMENT
-				components.TirePressureMonitor.averageDistance
-				components.TirePressureMonitor.detectedTirePressureDeviation
-				components.TirePressureMonitor.distanceFrontLeft
-				components.TirePressureMonitor.distanceFrontRight
-				components.TirePressureMonitor.distanceRearLeft
-				components.TirePressureMonitor.distanceRearRight
-			/end LOC_MEASUREMENT
+			/begin IN_MEASUREMENT
+				components.velocityMessage.vFrontLeft
+				components.velocityMessage.vFrontRight
+				components.velocityMessage.vRearLeft
+				components.velocityMessage.vRearRight
+			/end IN_MEASUREMENT
+			/begin OUT_MEASUREMENT
+				components.deviationMessage.deviationDetected
+			/end OUT_MEASUREMENT
 			/begin SUB_FUNCTION
 				components.TirePressureMonitor.Integrator_instance1
 				components.TirePressureMonitor.Integrator_instance2
@@ -439,10 +365,6 @@
 			""
 		/end FUNCTION
 		
-		/begin FUNCTION components.DeltaTimeService
-			""
-		/end FUNCTION
-		
 		/begin FUNCTION components.DeviationDetector
 			""
 		/end FUNCTION
@@ -456,8 +378,9 @@
 			ROOT
 			/begin SUB_GROUP
 				components.TirePressureMonitor
+				components.velocityMessage
+				components.deviationMessage
 				components.Average
-				components.DeltaTimeService
 				components.DeviationDetector
 			/end SUB_GROUP
 		/end GROUP
@@ -466,19 +389,7 @@
 			""
 			/begin REF_CHARACTERISTIC
 				components.TirePressureMonitor.deviationThreshold
-				components.TirePressureMonitor.vFrontLeft
-				components.TirePressureMonitor.vFrontRight
-				components.TirePressureMonitor.vRearLeft
-				components.TirePressureMonitor.vRearRight
 			/end REF_CHARACTERISTIC
-			/begin REF_MEASUREMENT
-				components.TirePressureMonitor.averageDistance
-				components.TirePressureMonitor.detectedTirePressureDeviation
-				components.TirePressureMonitor.distanceFrontLeft
-				components.TirePressureMonitor.distanceFrontRight
-				components.TirePressureMonitor.distanceRearLeft
-				components.TirePressureMonitor.distanceRearRight
-			/end REF_MEASUREMENT
 			/begin SUB_GROUP
 				components.TirePressureMonitor.Integrator_instance1
 				components.TirePressureMonitor.Integrator_instance2
@@ -527,11 +438,24 @@
 			/end REF_MEASUREMENT
 		/end GROUP
 		
-		/begin GROUP components.Average
+		/begin GROUP components.velocityMessage
 			""
+			/begin REF_MEASUREMENT
+				components.velocityMessage.vFrontLeft
+				components.velocityMessage.vFrontRight
+				components.velocityMessage.vRearLeft
+				components.velocityMessage.vRearRight
+			/end REF_MEASUREMENT
 		/end GROUP
 		
-		/begin GROUP components.DeltaTimeService
+		/begin GROUP components.deviationMessage
+			""
+			/begin REF_MEASUREMENT
+				components.deviationMessage.deviationDetected
+			/end REF_MEASUREMENT
+		/end GROUP
+		
+		/begin GROUP components.Average
 			""
 		/end GROUP
 		

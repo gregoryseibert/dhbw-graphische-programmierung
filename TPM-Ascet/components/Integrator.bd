@@ -1,9 +1,12 @@
 classType components.Integrator
 blockdiagramSpecification Main {
 	methodBody integrate {
-		outPin active {
+		outPin {
 			connection_7
 		}
+	}
+	methodBody resetMemory {
+		outPin active
 	}
 	simpleIdentifier memory at (291, 75) {
 		label at (0, -1)

@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID316cac87-96c2-4b32-96e5-8488614fde74" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID740389ee-e45f-4630-a759-5eba428d55c6" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID2eab0ccb-6ec3-471a-b80f-1a105c2a4a34" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID38ca6c78-f8c9-46f6-bdf5-ff609d73024c" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID8ebdb921-d7f9-4e8d-9be6-d3b722c02aae" path="C:\Users\Gregory\Documents\dhbw-graphische-programmierung\TPM-Ascet\experiments\Experiments\system\SystemTest_PC\SystemTest_PC.eex" hintPath="..\..\Experiments\system\SystemTest_PC\SystemTest_PC.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="IDa53c7edc-5f63-4c53-b17c-89542acfd19b" Created="2019-03-19T09:12:14.085Z" LastOpened="2019-03-20T13:22:50.438Z" LastSaved="2019-03-20T13:22:49.247Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID96c63dfa-fa35-479f-942c-086e7a6093da" Created="3.7.6.132" LastSaved="3.7.6.132" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

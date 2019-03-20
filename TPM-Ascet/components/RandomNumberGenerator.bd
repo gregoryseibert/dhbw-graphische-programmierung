@@ -1,0 +1,94 @@
+classType components.RandomNumberGenerator
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_40, connection_9
+		}
+	}
+	multiplication at (191, 36) {
+		inPin connection_14 {
+			bendpoints (120, 0)
+		}
+		inPin connection_15 {
+			bendpoints (120, 0)
+		}
+		outPin {
+			connection_3
+		}
+	}
+	simpleIdentifier memory at (21, 25) {
+		label at (0, -1)
+		inPin outPin {
+			connection_14
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (251, 66) {
+		inPin connection_3 {
+			bendpoints (20, 0)
+		}
+		inPin connection_12 {
+			bendpoints (180, 0)
+		}
+		outPin {
+			connection_16
+		}
+	}
+	simpleIdentifier memory at (371, 115) {
+		label at (0, -1)
+		inPin connection_19
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin connection_40
+		}
+	}
+	return at (471, 115) {
+		label at (0, 0)
+		inPin connection_10
+		sequenceCall {
+			inPin connection_9
+		}
+	}
+	methodArgumentIdentifier calc.parameterA at (31, 65) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.parameterC at (31, 105) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.parameterM at (31, 155) {
+		label at (0, -1)
+		outPin {
+			connection_17
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	modulo at (311, 106) {
+		inPin connection_16 {
+			bendpoints (20, 0)
+		}
+		inPin connection_17 {
+			bendpoints (240, 0)
+		}
+		outPin {
+			connection_19
+		}
+	}
+}
