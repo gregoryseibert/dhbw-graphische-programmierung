@@ -2,10 +2,10 @@ classType components.TirePressureMonitor
 blockdiagramSpecification Main {
 	methodBody checkTirePressure {
 		outPin active {
-			connection_193, connection_195, connection_197, connection_199, connection_182, connection_203, connection_205, connection_207, connection_209, connection_211, connection_214, connection_216
+			connection_203, connection_193, connection_195, connection_197, connection_199, connection_205, connection_207, connection_209, connection_211, connection_218, connection_182, connection_214, connection_216
 		}
 	}
-	simpleIdentifier deviationThreshold at (421, 275) {
+	simpleIdentifier deviationThreshold at (541, 425) {
 		label at (0, -1)
 		outPin {
 			connection_114
@@ -14,11 +14,11 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	complexIdentifier components.Average at (421, 301) size (14, 5) {
+	complexIdentifier components.Average at (521, 301) size (14, 5) {
 		label at (0, 1)
 		methodCall components.Average.calculateAverage {
 			argumentPin inputVal1 at (left, 0) connection_165 {
-				bendpoints (60, 0), (60, 150)
+				bendpoints (170, 0)
 			}
 			argumentPin inputVal2 at (left, 1) connection_168 {
 				bendpoints (30, 0), (30, 50)
@@ -27,32 +27,30 @@ blockdiagramSpecification Main {
 				bendpoints (30, 0), (30, -50)
 			}
 			argumentPin inputVal4 at (left, 3) connection_166 {
-				bendpoints (60, 0), (60, -150)
+				bendpoints (170, 0)
 			}
 			returnPin at (right, 3) {
-				connection_181
+				connection_220, connection_219
 			}
 			sequenceCall {
 				inPin
 			}
 		}
 	}
-	complexIdentifier components.DeviationDetector at (661, 251) size (14, 17) {
+	complexIdentifier components.DeviationDetector at (801, 211) size (14, 23) {
 		label at (0, 1)
 		methodCall components.DeviationDetector.checkForDeviation {
-			argumentPin inputVal1 at (left, 0) connection_169 {
-				bendpoints (60, 0), (60, 100)
+			argumentPin inputVal1 at (left, 2) connection_169 {
+				bendpoints (170, 0), (170, 80)
 			}
-			argumentPin inputVal2 at (left, 1) connection_172
-			argumentPin inputVal3 at (left, 12) connection_171
-			argumentPin inputVal4 at (left, 13) connection_170 {
-				bendpoints (60, 0), (60, -100)
+			argumentPin inputVal2 at (left, 5) connection_172
+			argumentPin inputVal3 at (left, 16) connection_171
+			argumentPin inputVal4 at (left, 18) connection_170 {
+				bendpoints (170, 0), (170, -90)
 			}
-			argumentPin referenceVal at (left, 8) connection_181
-			argumentPin deviationThreshold at (left, 5) connection_114 {
-				bendpoints (190, 0)
-			}
-			returnPin at (right, 15) {
+			argumentPin referenceVal at (left, 12) connection_220
+			argumentPin deviationThreshold at (left, 21) connection_114
+			returnPin at (right, 0) {
 				connection_217, connection_183
 			}
 			sequenceCall {
@@ -69,7 +67,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier components.velocityMessage.vFrontRight at (21, 245) {
+	simpleIdentifier components.velocityMessage.vFrontRight at (21, 255) {
 		label at (0, -1)
 		outPin {
 			connection_174
@@ -78,7 +76,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier components.velocityMessage.vRearLeft at (21, 355) {
+	simpleIdentifier components.velocityMessage.vRearLeft at (21, 365) {
 		label at (0, -1)
 		outPin {
 			connection_178
@@ -96,10 +94,12 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier components.deviationMessage.deviationDetected at (871, 405) {
+	simpleIdentifier components.deviationMessage.deviationDetected at (981, 305) {
 		label at (0, -1)
-		inPin connection_183
-		sequenceCall {
+		inPin connection_183 {
+			bendpoints (0, 90)
+		}
+		sequenceCall at (-10, -14) {
 			inPin connection_182
 		}
 	}
@@ -119,7 +119,7 @@ blockdiagramSpecification Main {
 				bendpoints (120, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_176
-			sequenceCall at (-140, -14) {
+			sequenceCall at (-120, -14) {
 				inPin connection_193
 			}
 		}
@@ -145,10 +145,8 @@ blockdiagramSpecification Main {
 			argumentPin dTVal at (left, 0) connection_187 {
 				bendpoints (120, 0)
 			}
-			argumentPin inputVal at (left, 1) connection_174 {
-				bendpoints (120, 0)
-			}
-			sequenceCall at (-140, -24) {
+			argumentPin inputVal at (left, 1) connection_174
+			sequenceCall at (-120, -14) {
 				inPin connection_195
 			}
 		}
@@ -174,10 +172,8 @@ blockdiagramSpecification Main {
 			argumentPin dTVal at (left, 0) connection_189 {
 				bendpoints (120, 0)
 			}
-			argumentPin inputVal at (left, 1) connection_178 {
-				bendpoints (120, 0)
-			}
-			sequenceCall at (-140, -24) {
+			argumentPin inputVal at (left, 1) connection_178
+			sequenceCall at (-120, -14) {
 				inPin connection_197
 			}
 		}
@@ -204,7 +200,7 @@ blockdiagramSpecification Main {
 				bendpoints (120, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_180
-			sequenceCall at (-140, -14) {
+			sequenceCall at (-120, -14) {
 				inPin connection_199
 			}
 		}
@@ -224,7 +220,7 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier components.deviationMessage.recalibrate at (11, 35) {
+	simpleIdentifier components.deviationMessage.recalibrate at (21, 35) {
 		label at (0, -1)
 		outPin {
 			connection_204
@@ -242,44 +238,44 @@ blockdiagramSpecification Main {
 			inPin connection_203
 		}
 	}
-	simpleIdentifier components.distanceMessage.distanceFrontLeft at (441, 155) {
+	simpleIdentifier components.distanceMessage.distanceFrontLeft at (531, 155) {
 		label at (0, -1)
 		inPin connection_206
-		sequenceCall {
+		sequenceCall at (-10, -14) {
 			inPin connection_205
 		}
 	}
-	simpleIdentifier components.distanceMessage.distanceFrontRight at (441, 215) {
+	simpleIdentifier components.distanceMessage.distanceFrontRight at (381, 215) {
 		label at (0, -1)
 		inPin connection_208 {
 			bendpoints (30, 0), (30, -50)
 		}
-		sequenceCall {
+		sequenceCall at (-10, -14) {
 			inPin connection_207
 		}
 	}
-	simpleIdentifier components.distanceMessage.distanceRearLeft at (431, 425) {
+	simpleIdentifier components.distanceMessage.distanceRearLeft at (381, 425) {
 		label at (0, -1)
 		inPin connection_210 {
 			bendpoints (30, 0), (30, 50)
 		}
-		sequenceCall {
+		sequenceCall at (-10, -14) {
 			inPin connection_209
 		}
 	}
-	simpleIdentifier components.distanceMessage.distanceRearRight at (431, 485) {
+	simpleIdentifier components.distanceMessage.distanceRearRight at (531, 485) {
 		label at (0, -1)
 		inPin connection_212
-		sequenceCall {
+		sequenceCall at (-10, -24) {
 			inPin connection_211
 		}
 	}
-	complexIdentifier WarningSOS_instance at (841, 71) size (17, 8) {
+	complexIdentifier WarningSOS_instance at (981, 71) size (17, 8) {
 		label at (0, 1)
 		methodCall components.WarningSOS.warningSOSStatemachineTrigger {
 			methodVoidPin at (left, 6) sequenceCall at (-170, -4) {
 				inPin connection_213 {
-					bendpoints (0, -40), (-200, -40)
+					bendpoints (0, -40), (-220, -40)
 				}
 			}
 		}
@@ -290,7 +286,7 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier deltaT at (761, 75) {
+	simpleIdentifier deltaT at (901, 75) {
 		label at (0, -1)
 		inPin outPin {
 			connection_215
@@ -299,13 +295,20 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	if at (811, 221) {
+	if at (971, 211) {
 		inPin connection_217
 		ifControlFlowOutPin {
 			connection_213
 		}
-		sequenceCall at (0, 30) {
+		sequenceCall at (-70, -30) {
 			inPin connection_216
+		}
+	}
+	simpleIdentifier components.distanceMessage.averageDistance at (671, 315) {
+		label at (10, -1)
+		inPin connection_219
+		sequenceCall at (-10, -14) {
+			inPin connection_218
 		}
 	}
 }

@@ -216,13 +216,13 @@ blockdiagramSpecification Main {
 	multiplication at (541, 36) {
 		inPin connection_44
 		inPin connection_38 {
-			bendpoints (220, 0), (220, -160)
+			bendpoints (60, 0), (60, -160)
 		}
 		outPin {
 			connection_68
 		}
 	}
-	simpleIdentifier numberGain at (271, 215) {
+	simpleIdentifier numberGain at (431, 215) {
 		label at (0, -1)
 		outPin {
 			connection_51, connection_54, connection_61, connection_38
@@ -240,7 +240,7 @@ blockdiagramSpecification Main {
 	multiplication at (541, 256) {
 		inPin connection_48
 		inPin connection_51 {
-			bendpoints (220, 0), (220, 60)
+			bendpoints (60, 0), (60, 60)
 		}
 		outPin {
 			connection_84
@@ -261,7 +261,7 @@ blockdiagramSpecification Main {
 	multiplication at (541, 146) {
 		inPin connection_53
 		inPin connection_54 {
-			bendpoints (220, 0), (220, -50)
+			bendpoints (60, 0), (60, -50)
 		}
 		outPin {
 			connection_71
@@ -270,7 +270,7 @@ blockdiagramSpecification Main {
 	multiplication at (541, 366) {
 		inPin connection_60
 		inPin connection_61 {
-			bendpoints (220, 0), (220, 170)
+			bendpoints (60, 0), (60, 170)
 		}
 		outPin {
 			connection_85
@@ -282,7 +282,7 @@ blockdiagramSpecification Main {
 			connection_60
 		}
 	}
-	simpleIdentifier recalibrate at (11, 495) {
+	simpleIdentifier recalibrate at (11, 475) {
 		label at (0, -1)
 		outPin {
 			connection_67
@@ -291,7 +291,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier components.deviationMessage.recalibrate at (201, 495) {
+	simpleIdentifier components.deviationMessage.recalibrate at (201, 475) {
 		label at (0, -1)
 		inPin connection_67
 		sequenceCall {

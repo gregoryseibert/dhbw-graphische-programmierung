@@ -12,6 +12,7 @@ data interface distanceMessage {
 	real distanceFrontRight = 0.0;
 	real distanceRearLeft = 0.0;
 	real distanceRearRight = 0.0;
+	real averageDistance = 0.0;
 }
 
 data interface deviationMessage {
