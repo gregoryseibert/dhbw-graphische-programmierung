@@ -2,7 +2,7 @@ classType components.TirePressureMonitor
 blockdiagramSpecification Main {
 	methodBody checkTirePressure {
 		outPin active {
-			connection_193, connection_195, connection_197, connection_199, connection_182, connection_203, connection_205, connection_207, connection_209, connection_211
+			connection_193, connection_195, connection_197, connection_199, connection_182, connection_203, connection_205, connection_207, connection_209, connection_211, connection_214, connection_216
 		}
 	}
 	simpleIdentifier deviationThreshold at (421, 275) {
@@ -53,7 +53,7 @@ blockdiagramSpecification Main {
 				bendpoints (190, 0)
 			}
 			returnPin at (right, 15) {
-				connection_183
+				connection_217, connection_183
 			}
 			sequenceCall {
 				inPin
@@ -96,11 +96,9 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier components.deviationMessage.deviationDetected at (871, 325) {
+	simpleIdentifier components.deviationMessage.deviationDetected at (871, 405) {
 		label at (0, -1)
-		inPin connection_183 {
-			bendpoints (0, -80)
-		}
+		inPin connection_183
 		sequenceCall {
 			inPin connection_182
 		}
@@ -121,7 +119,7 @@ blockdiagramSpecification Main {
 				bendpoints (120, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_176
-			sequenceCall at (-120, -14) {
+			sequenceCall at (-140, -14) {
 				inPin connection_193
 			}
 		}
@@ -136,7 +134,7 @@ blockdiagramSpecification Main {
 		methodCall components.Integrator.resetMemory {
 			methodVoidPin at (right, 0) sequenceCall at (-49, -34) {
 				inPin connection_192 {
-					bendpoints (40, 0), (40, 70)
+					bendpoints (70, 0), (70, 70)
 				}
 			}
 		}
@@ -150,7 +148,7 @@ blockdiagramSpecification Main {
 			argumentPin inputVal at (left, 1) connection_174 {
 				bendpoints (120, 0)
 			}
-			sequenceCall at (-120, -24) {
+			sequenceCall at (-140, -24) {
 				inPin connection_195
 			}
 		}
@@ -165,7 +163,7 @@ blockdiagramSpecification Main {
 		methodCall components.Integrator.resetMemory {
 			methodVoidPin at (right, 0) sequenceCall at (-49, -34) {
 				inPin connection_194 {
-					bendpoints (40, 0), (40, 180)
+					bendpoints (0, 180)
 				}
 			}
 		}
@@ -179,7 +177,7 @@ blockdiagramSpecification Main {
 			argumentPin inputVal at (left, 1) connection_178 {
 				bendpoints (120, 0)
 			}
-			sequenceCall at (-120, -24) {
+			sequenceCall at (-140, -24) {
 				inPin connection_197
 			}
 		}
@@ -194,7 +192,7 @@ blockdiagramSpecification Main {
 		methodCall components.Integrator.resetMemory {
 			methodVoidPin at (right, 0) sequenceCall at (-39, -34) {
 				inPin connection_196 {
-					bendpoints (40, 0), (40, 290)
+					bendpoints (0, 290)
 				}
 			}
 		}
@@ -206,7 +204,7 @@ blockdiagramSpecification Main {
 				bendpoints (120, 0)
 			}
 			argumentPin inputVal at (left, 1) connection_180
-			sequenceCall at (-120, -14) {
+			sequenceCall at (-140, -14) {
 				inPin connection_199
 			}
 		}
@@ -221,7 +219,7 @@ blockdiagramSpecification Main {
 		methodCall components.Integrator.resetMemory {
 			methodVoidPin at (right, 0) sequenceCall at (-49, -34) {
 				inPin connection_198 {
-					bendpoints (40, 0), (40, 400)
+					bendpoints (0, 400)
 				}
 			}
 		}
@@ -235,7 +233,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	if at (151, 31) {
+	if at (121, 31) {
 		inPin connection_204
 		ifControlFlowOutPin {
 			connection_192, connection_194, connection_196, connection_198
@@ -274,6 +272,40 @@ blockdiagramSpecification Main {
 		inPin connection_212
 		sequenceCall {
 			inPin connection_211
+		}
+	}
+	complexIdentifier WarningSOS_instance at (841, 71) size (17, 8) {
+		label at (0, 1)
+		methodCall components.WarningSOS.warningSOSStatemachineTrigger {
+			methodVoidPin at (left, 6) sequenceCall at (-170, -4) {
+				inPin connection_213 {
+					bendpoints (0, -40), (-200, -40)
+				}
+			}
+		}
+		elementCall (components.WarningSOS.deltaTime) {
+			argumentPin at (left, 0) connection_215
+			sequenceCall at (0, -34) {
+				inPin connection_214
+			}
+		}
+	}
+	simpleIdentifier deltaT at (761, 75) {
+		label at (0, -1)
+		inPin outPin {
+			connection_215
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	if at (811, 221) {
+		inPin connection_217
+		ifControlFlowOutPin {
+			connection_213
+		}
+		sequenceCall at (0, 30) {
+			inPin connection_216
 		}
 	}
 }

@@ -55,13 +55,8 @@
 		        /* period */ 10
 		        QP_BLOB 1
 		    /end SOURCE
-		    /begin SOURCE "Task1"
-		        /* type   */ 3
-		        /* period */ 1000
-		        QP_BLOB 2
-		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3187686298
+		         /* programm id */ 3313516036
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -93,7 +88,7 @@
 		/begin CHARACTERISTIC components.SystemTest.parameterANormal
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434028
+			/* ecu address        */ 0x435028
 			/* record layout      */ STANDARD_VALUE_S32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -107,7 +102,7 @@
 		/begin CHARACTERISTIC components.SystemTest.parameterCNormal
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434030
+			/* ecu address        */ 0x435030
 			/* record layout      */ STANDARD_VALUE_S32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -121,7 +116,7 @@
 		/begin CHARACTERISTIC components.SystemTest.parameterMNormal
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434038
+			/* ecu address        */ 0x435038
 			/* record layout      */ STANDARD_VALUE_S32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -135,7 +130,7 @@
 		/begin CHARACTERISTIC components.SystemTest.parameterADeviation
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434024
+			/* ecu address        */ 0x435024
 			/* record layout      */ STANDARD_VALUE_S32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -149,7 +144,7 @@
 		/begin CHARACTERISTIC components.SystemTest.parameterCDeviation
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x43402C
+			/* ecu address        */ 0x43502C
 			/* record layout      */ STANDARD_VALUE_S32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -163,7 +158,7 @@
 		/begin CHARACTERISTIC components.SystemTest.parameterMDeviation
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434034
+			/* ecu address        */ 0x435034
 			/* record layout      */ STANDARD_VALUE_S32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -177,7 +172,7 @@
 		/begin CHARACTERISTIC components.SystemTest.baseSignal
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434020
+			/* ecu address        */ 0x435020
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -191,7 +186,7 @@
 		/begin CHARACTERISTIC components.SystemTest.recalibrate
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x43403C
+			/* ecu address        */ 0x43503C
 			/* record layout      */ STANDARD_VALUE_U8
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -206,21 +201,21 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.deviationThreshold
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434040
+			/* ecu address        */ 0x435040
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 5
 			/end IF_DATA
 		/end CHARACTERISTIC
 
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434044
+			/* ecu address        */ 0x435044
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -234,7 +229,7 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance_2.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434048
+			/* ecu address        */ 0x435048
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -248,7 +243,7 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance_3.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x43404C
+			/* ecu address        */ 0x43504C
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -262,7 +257,7 @@
 		/begin CHARACTERISTIC components.TirePressureMonitor.Integrator_instance_4.kI
 			/* long identifier    */ ""
 			/* type               */ VALUE
-			/* ecu address        */ 0x434050
+			/* ecu address        */ 0x435050
 			/* record layout      */ STANDARD_VALUE_R32
 			/* max diff value     */ 0.0
 			/* conversion         */ esdl_ident
@@ -281,7 +276,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ 0
 			/* upper limit        */ 1000
-			ECU_ADDRESS 0x434000
+			ECU_ADDRESS 0x435000
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 0 1000 0
 			/end IF_DATA
@@ -295,7 +290,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ 0
 			/* upper limit        */ 1000
-			ECU_ADDRESS 0x434002
+			ECU_ADDRESS 0x435002
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 1 1000 0
 			/end IF_DATA
@@ -309,7 +304,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ 0
 			/* upper limit        */ 1000
-			ECU_ADDRESS 0x434004
+			ECU_ADDRESS 0x435004
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 2 1000 0
 			/end IF_DATA
@@ -323,7 +318,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ 0
 			/* upper limit        */ 1000
-			ECU_ADDRESS 0x434006
+			ECU_ADDRESS 0x435006
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 0 1000 3 1000 0
 			/end IF_DATA
@@ -337,7 +332,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451050
+			ECU_ADDRESS 0x45205C
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 0
 			/end IF_DATA
@@ -351,7 +346,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x45104C
+			ECU_ADDRESS 0x452058
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 1
 			/end IF_DATA
@@ -365,7 +360,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451048
+			ECU_ADDRESS 0x452054
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 2
 			/end IF_DATA
@@ -379,7 +374,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451044
+			ECU_ADDRESS 0x452050
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 3
 			/end IF_DATA
@@ -393,7 +388,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ 0
 			/* upper limit        */ 1
-			ECU_ADDRESS 0x451021
+			ECU_ADDRESS 0x452021
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1001 0
@@ -408,7 +403,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ 0
 			/* upper limit        */ 1
-			ECU_ADDRESS 0x451020
+			ECU_ADDRESS 0x452020
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1001 1
@@ -423,7 +418,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451034
+			ECU_ADDRESS 0x452034
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 0
 			/end IF_DATA
@@ -437,7 +432,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451038
+			ECU_ADDRESS 0x452038
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 0
 			/end IF_DATA
@@ -451,7 +446,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x45103C
+			ECU_ADDRESS 0x45203C
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 2 1000 0
 			/end IF_DATA
@@ -465,9 +460,94 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451040
+			ECU_ADDRESS 0x452040
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 3 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.TirePressureMonitor.WarningSOS_instance.sm
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_components_WarningSOSStatemachineStates
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 4
+			ECU_ADDRESS 0x45204F
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 4 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.TirePressureMonitor.WarningSOS_instance.deltaTime
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x452044
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 4 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.TirePressureMonitor.WarningSOS_instance.time
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x452048
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 4 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.TirePressureMonitor.WarningSOS_instance.counterSignalShort
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 3
+			ECU_ADDRESS 0x45204D
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 4 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.TirePressureMonitor.WarningSOS_instance.counterSignalLong
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 3
+			ECU_ADDRESS 0x45204C
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 4 1000 4
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT components.TirePressureMonitor.WarningSOS_instance.lampIsOn
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x45204E
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 4 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -479,7 +559,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451030
+			ECU_ADDRESS 0x452030
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 0
 			/end IF_DATA
@@ -493,7 +573,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x45102C
+			ECU_ADDRESS 0x45202C
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 1
 			/end IF_DATA
@@ -507,7 +587,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451028
+			ECU_ADDRESS 0x452028
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 2
 			/end IF_DATA
@@ -521,7 +601,7 @@
 			/* accuracy           */ 100.0
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x451024
+			ECU_ADDRESS 0x452024
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 3
 			/end IF_DATA
@@ -534,6 +614,26 @@
 			/* unit               */ ""
 			/* coeffs             */ COEFFS 0 1 0 0 0 1
 		/end COMPU_METHOD
+		
+		/begin COMPU_METHOD esdl_components_WarningSOSStatemachineStates
+			/* long identifier    */ ""
+			/* type               */ TAB_VERB
+			/* format             */ "%12.4"
+			/* unit               */ ""
+			/* compu_tab_ref      */ COMPU_TAB_REF esdl_components_WarningSOSStatemachineStates_vtab
+		/end COMPU_METHOD
+		
+		/begin COMPU_VTAB esdl_components_WarningSOSStatemachineStates_vtab
+			/* long identifier    */ ""
+			/* type               */ TAB_VERB
+			/* number value pairs */ 5 
+			/* value pair         */ 0 "Initial"
+			/* value pair         */ 4 "ShortSignal"
+			/* value pair         */ 2 "LampOff"
+			/* value pair         */ 1 "End"
+			/* value pair         */ 3 "LongSignal"
+			/* default value      */ DEFAULT_VALUE "Error"
+		/end COMPU_VTAB 
 		
 		/begin FUNCTION SystemTest_PC
 			""
@@ -624,6 +724,7 @@
 				components.TirePressureMonitor.Integrator_instance_2
 				components.TirePressureMonitor.Integrator_instance_3
 				components.TirePressureMonitor.Integrator_instance_4
+				components.TirePressureMonitor.WarningSOS_instance
 			/end SUB_FUNCTION
 		/end FUNCTION
 		
@@ -664,6 +765,18 @@
 			/end DEF_CHARACTERISTIC
 			/begin LOC_MEASUREMENT
 				components.TirePressureMonitor.Integrator_instance_4.memory
+			/end LOC_MEASUREMENT
+		/end FUNCTION
+		
+		/begin FUNCTION components.TirePressureMonitor.WarningSOS_instance
+			""
+			/begin LOC_MEASUREMENT
+				components.TirePressureMonitor.WarningSOS_instance.counterSignalLong
+				components.TirePressureMonitor.WarningSOS_instance.counterSignalShort
+				components.TirePressureMonitor.WarningSOS_instance.deltaTime
+				components.TirePressureMonitor.WarningSOS_instance.lampIsOn
+				components.TirePressureMonitor.WarningSOS_instance.sm
+				components.TirePressureMonitor.WarningSOS_instance.time
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		
@@ -777,6 +890,7 @@
 				components.TirePressureMonitor.Integrator_instance_2
 				components.TirePressureMonitor.Integrator_instance_3
 				components.TirePressureMonitor.Integrator_instance_4
+				components.TirePressureMonitor.WarningSOS_instance
 			/end SUB_GROUP
 		/end GROUP
 		
@@ -817,6 +931,18 @@
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
 				components.TirePressureMonitor.Integrator_instance_4.memory
+			/end REF_MEASUREMENT
+		/end GROUP
+		
+		/begin GROUP components.TirePressureMonitor.WarningSOS_instance
+			""
+			/begin REF_MEASUREMENT
+				components.TirePressureMonitor.WarningSOS_instance.counterSignalLong
+				components.TirePressureMonitor.WarningSOS_instance.counterSignalShort
+				components.TirePressureMonitor.WarningSOS_instance.deltaTime
+				components.TirePressureMonitor.WarningSOS_instance.lampIsOn
+				components.TirePressureMonitor.WarningSOS_instance.sm
+				components.TirePressureMonitor.WarningSOS_instance.time
 			/end REF_MEASUREMENT
 		/end GROUP
 		

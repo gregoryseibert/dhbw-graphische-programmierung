@@ -10,6 +10,7 @@ writes deviationMessage.deviationDetected, distanceMessage.distanceFrontLeft, di
 	Integrator Integrator_instance_2;
 	Integrator Integrator_instance_3;
 	Integrator Integrator_instance_4;
+	WarningSOS WarningSOS_instance;
 
 	@thread
 	@generated("blockdiagram")
@@ -29,5 +30,9 @@ writes deviationMessage.deviationDetected, distanceMessage.distanceFrontLeft, di
 		distanceMessage.distanceFrontRight = Integrator_instance_2.outVal(); // Main/checkTirePressure 8
 		distanceMessage.distanceRearLeft = Integrator_instance_3.outVal(); // Main/checkTirePressure 9
 		distanceMessage.distanceRearRight = Integrator_instance_4.outVal(); // Main/checkTirePressure 10
+		WarningSOS_instance.deltaTime = deltaT; // Main/checkTirePressure 11
+		if (DeviationDetector.checkForDeviation(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal(), Average.calculateAverage(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal()), deviationThreshold)) {
+			WarningSOS_instance.warningSOSStatemachineTrigger(); // Main/checkTirePressure 12/if-then 1
+		} // Main/checkTirePressure 12
 	}
 }
