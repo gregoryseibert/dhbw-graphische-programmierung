@@ -3,7 +3,8 @@ package components;
 static class TirePressureMonitor
 reads velocityMessage.vFrontLeft, velocityMessage.vFrontRight, velocityMessage.vRearLeft, velocityMessage.vRearRight, deviationMessage.recalibrate
 writes deviationMessage.deviationDetected, distanceMessage.distanceFrontLeft, distanceMessage.distanceFrontRight, distanceMessage.distanceRearLeft, distanceMessage.distanceRearRight, distanceMessage.averageDistance {
-	@dT public real deltaT;
+	@dT
+	public real deltaT;
 	characteristic real deviationThreshold = 0.005; //0.5 percent
 	Integrator Integrator_instance;
 	Integrator Integrator_instance_2;
@@ -30,9 +31,11 @@ writes deviationMessage.deviationDetected, distanceMessage.distanceFrontLeft, di
 		distanceMessage.distanceRearRight = Integrator_instance_4.outVal(); // Main/checkTirePressure 9
 		distanceMessage.averageDistance = Average.calculateAverage(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal()); // Main/checkTirePressure 10
 		deviationMessage.deviationDetected = DeviationDetector.checkForDeviation(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal(), Average.calculateAverage(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal()), deviationThreshold); // Main/checkTirePressure 11
-		WarningSOS_instance.deltaTime = deltaT; // Main/checkTirePressure 12
 		if (DeviationDetector.checkForDeviation(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal(), Average.calculateAverage(Integrator_instance.outVal(), Integrator_instance_2.outVal(), Integrator_instance_3.outVal(), Integrator_instance_4.outVal()), deviationThreshold)) {
-			WarningSOS_instance.warningSOSStatemachineTrigger(); // Main/checkTirePressure 13/if-then 1
-		} // Main/checkTirePressure 13
+			WarningSOS_instance.warningSOSStatemachineTrigger(); // Main/checkTirePressure 12/if-then 1
+		} else {
+			WarningSOS_instance.lampIsOn = false; // Main/checkTirePressure 12/if-else 1
+		} // Main/checkTirePressure 12
+		WarningSOS_instance.deltaTime = deltaT; // Main/checkTirePressure 13
 	}
 }

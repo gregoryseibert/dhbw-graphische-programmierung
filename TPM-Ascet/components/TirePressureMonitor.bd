@@ -2,7 +2,7 @@ classType components.TirePressureMonitor
 blockdiagramSpecification Main {
 	methodBody checkTirePressure {
 		outPin active {
-			connection_203, connection_193, connection_195, connection_197, connection_199, connection_205, connection_207, connection_209, connection_211, connection_218, connection_182, connection_214, connection_216
+			connection_203, connection_193, connection_195, connection_197, connection_199, connection_205, connection_207, connection_209, connection_211, connection_218, connection_182, connection_216, connection_229
 		}
 	}
 	simpleIdentifier deviationThreshold at (541, 425) {
@@ -94,11 +94,9 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier components.deviationMessage.deviationDetected at (981, 305) {
+	simpleIdentifier components.deviationMessage.deviationDetected at (961, 215) {
 		label at (0, -1)
-		inPin connection_183 {
-			bendpoints (0, 90)
-		}
+		inPin connection_183
 		sequenceCall at (-10, -14) {
 			inPin connection_182
 		}
@@ -270,37 +268,26 @@ blockdiagramSpecification Main {
 			inPin connection_211
 		}
 	}
-	complexIdentifier WarningSOS_instance at (981, 71) size (17, 8) {
-		label at (0, 1)
-		methodCall components.WarningSOS.warningSOSStatemachineTrigger {
-			methodVoidPin at (left, 6) sequenceCall at (-170, -4) {
-				inPin connection_213 {
-					bendpoints (0, -40), (-220, -40)
-				}
-			}
-		}
-		elementCall (components.WarningSOS.deltaTime) {
-			argumentPin at (left, 0) connection_215
-			sequenceCall at (0, -34) {
-				inPin connection_214
-			}
-		}
-	}
-	simpleIdentifier deltaT at (901, 75) {
+	simpleIdentifier deltaT at (841, 165) {
 		label at (0, -1)
 		inPin outPin {
-			connection_215
+			connection_225
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	if at (971, 211) {
-		inPin connection_217
-		ifControlFlowOutPin {
-			connection_213
+	ifElse at (791, 41) {
+		inPin connection_217 {
+			bendpoints (0, -20), (-160, -20)
 		}
-		sequenceCall at (-70, -30) {
+		ifControlFlowOutPin {
+			connection_228
+		}
+		elseControlFlowOutPin {
+			connection_230
+		}
+		sequenceCall at (0, -20) {
 			inPin connection_216
 		}
 	}
@@ -309,6 +296,31 @@ blockdiagramSpecification Main {
 		inPin connection_219
 		sequenceCall at (-10, -14) {
 			inPin connection_218
+		}
+	}
+	literal Boolean "false" at (851, 103) size (49, 0) {
+		outPin {
+			connection_227
+		}
+	}
+	complexIdentifier WarningSOS_instance at (971, 81) size (14, 10) {
+		label at (0, 1)
+		methodCall components.WarningSOS.warningSOSStatemachineTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -30) {
+				inPin connection_228
+			}
+		}
+		elementCall (components.WarningSOS.deltaTime) {
+			argumentPin at (left, 8) connection_225
+			sequenceCall at (-120, -34) {
+				inPin connection_229
+			}
+		}
+		elementCall (components.WarningSOS.lampIsOn) {
+			argumentPin at (left, 2) connection_227
+			sequenceCall at (-120, -34) {
+				inPin connection_230
+			}
 		}
 	}
 }

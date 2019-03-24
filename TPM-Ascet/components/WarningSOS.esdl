@@ -16,6 +16,7 @@ class WarningSOS {
 	real time = 0.0;
 	counterint counterSignalShort = 0;
 	counterint counterSignalLong = 0;
+	@set
 	boolean lampIsOn = false;
 
 	@generated("statemachine")
