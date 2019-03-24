@@ -18,20 +18,10 @@ blockdiagramSpecification Main {
 			inPin connection_7
 		}
 	}
-	simpleIdentifier kI at (31, 65) {
-		label at (0, -1)
-		outPin {
-			connection_3
-		}
-		sequenceCall {
-			inPin
-		}
-	}
 	multiplication at (161, 56) {
 		inPin connection_4 {
 			bendpoints (90, 0)
 		}
-		inPin connection_3
 		inPin connection_5 {
 			bendpoints (90, 0)
 		}
@@ -39,7 +29,7 @@ blockdiagramSpecification Main {
 			connection_6
 		}
 	}
-	methodArgumentIdentifier integrate.inputVal at (31, 25) {
+	methodArgumentIdentifier integrate.inputVal at (31, 45) {
 		label at (0, -1)
 		outPin {
 			connection_4
@@ -48,7 +38,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	methodArgumentIdentifier integrate.dTVal at (31, 95) {
+	methodArgumentIdentifier integrate.dTVal at (31, 85) {
 		label at (0, -1)
 		outPin {
 			connection_5

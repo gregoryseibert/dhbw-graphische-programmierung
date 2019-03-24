@@ -2,11 +2,10 @@ package components;
 
 class Integrator {
 	real memory = 0.0;
-	characteristic real kI = 1.0;
 
 	@generated("blockdiagram")
 	public void integrate(real in dTVal, real in inputVal) {
-		memory = ((inputVal * kI * dTVal) + memory); // Main/integrate 1
+		memory = ((inputVal * dTVal) + memory); // Main/integrate 1
 	}
 
 	@no_side_effect

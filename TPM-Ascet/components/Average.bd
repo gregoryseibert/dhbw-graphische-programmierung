@@ -46,10 +46,10 @@ blockdiagramSpecification Main {
 			bendpoints (140, 0), (140, 40)
 		}
 		inPin connection_2 {
-			bendpoints (80, 0), (80, 10)
+			bendpoints (130, 0), (130, 10)
 		}
 		inPin connection_3 {
-			bendpoints (80, 0), (80, -10)
+			bendpoints (130, 0), (130, -10)
 		}
 		inPin connection_4 {
 			bendpoints (140, 0), (140, -40)
